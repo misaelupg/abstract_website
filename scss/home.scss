@@ -1,0 +1,79 @@
+@import 'variables';
+
+
+/****************************************************************************/
+/* Delete Default Styles */
+/****************************************************************************/
+
+/*========== List ==========*/
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} 
+
+body {
+  position: relative;
+}
+
+/****************************************************************************/
+/* Header */
+/****************************************************************************/
+
+/*========== Nav ==========*/
+
+.main_nav {
+  display: block;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  ul {
+    display: block;
+    padding-left: 20px;
+    position: relative;
+    li.nav-item {
+      display: inline-block;
+      padding: 60px 12px 20px 5px;
+      a {
+        text-decoration: none;
+      }
+      
+    }
+    li.nav-item, a {
+      color: $grey;
+      font-family: $post-grotesk;
+      font-weight: 600;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+      letter-spacing: 4px;
+      font-size: $link;
+      position: relative;
+    }
+    .active {
+      a::after {
+        content:''; 
+        width:40px; 
+        height:4px; 
+        background:$grey; 
+        position:absolute; 
+        top: 28px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+
+/****************************************************************************/
+/* Animated Background */
+/****************************************************************************/
+
+#animated-background {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  background-color: $blue;
+}

@@ -1,37 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ABSRACT | Agencia Digital | Software, Diseño, Marketing, Innovación Tecnológica, Data</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ABSTRACT | Agencia Digital | Software, Diseño, Marketing, Innovación Tecnológica, Data</title>
+<link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
+">
+<link rel="stylesheet" type="text/css" href="./css/home.css">
 </head>
 <body>
-    <header id="cover">
-        <nav class="main_nav">
-            <ul class="menu">
-                <li><a href="">HOME</a></li>
-                <li><a href="">PORTAFOLIO</a></li>
-                <li><a href="">LABS</a></li>
-                <li><a href="">JOURNAL</a></li>
-                <li><a href="">HUMAN [X]</a></li>
-                <li><a href="">&#43; contactar</a></li>
-            </ul>
-        </nav>
 
-    </header>
+    <!-- ==========================================================================
+    Cover
+    ========================================================================== -->
+    <!-- Header -->
+    <header>
+        <nav class="main_nav">
+            <ul>
+                <li class="nav-item"><a href="">HOME</a></li>
+                <li class="nav-item"><a href="">PORTAFOLIO</a></li>
+                <li class="nav-item"><a href="">LABS</a></li>
+                <li class="nav-item active"><a href="">JOURNAL</a></li>
+                <li class="nav-item"><a href="">HUMAN [X]</a></li>
+                <li class="contact-item nav-item"><a href="">&#43; contactar</a></li>
+            </ul><!-- menu -->
+        </nav><!-- nav -->
+    
+    </header><!-- cover -->
+    
+    <!-- Animated Container -->
+    
+    <canvas id="animated-background">
+    
+    </canvas>
+
+
+    <!-- ==========================================================================
+    Star Projects
+    ========================================================================== -->
     <div class="project-scroll">
-        <section class="star-project"></section>
-        <section class="star-project"></section>
-        <section class="star-project"></section>
-    <div>
+        <!-- Project 1 -->
+        <section class="star-project">
+            
+        </section><!-- comment -->
+        <!-- Project 2 -->
+        <section class="star-project">
+            
+        </section><!-- comment -->
+        <!-- Project 3 -->
+        <section class="star-project">
+            
+        </section><!-- comment -->
+    </div><!-- star projects section -->
+
+    <!-- ==========================================================================
+    Landing
+    ========================================================================== -->
     <div id="landing">
-        <section></section>
-        <section></section>
-        <section></section>
-    </div>
+        <section>
+            
+        </section>
+        <section>
+            
+        </section>
+        <section>
+            
+        </section>
+    </div><!-- landing -->
+    
+    <!-- ==========================================================================
+    Get in Touch
+    ========================================================================== -->
     <div class="get-in-touch">
         
-    </div>
+    </div><!-- get in touch -->
+
+    <!-- ==========================================================================
+    Footer
+    ========================================================================== -->
     <footer>
         
-    </footer>
+    </footer><!-- footer -->
+
+    <script>
+        (function() {
+            var 
+                // Obtain a reference to the canvas element
+                // using its id.
+                htmlCanvas = document.getElementById('animated-background'),
+            
+                // Obtain a graphics ctx on the
+                // canvas element for drawing.
+                ctx = htmlCanvas.getContext('2d');
+
+ 
+            // Start listening to resize events and
+            // draw canvas.
+            initialize();
+ 
+            function initialize() {
+                // Register an event listener to
+                // call the resizeCanvas() function each time 
+                // the window is resized.
+                window.addEventListener('resize', resizeCanvas, false);
+                
+                // Draw canvas border for the first time.
+                resizeCanvas();
+            }
+                
+            // Display custom canvas.
+            // In this case it's a blue, 5 pixel border that 
+            // resizes along with the browser window.                   
+            function redraw() {
+
+                ctx.beginPath();
+                var x = 50; 
+                var y = 50;
+                var radius = 300;
+                var startAngle = 0;
+                var endAngle = Math.PI*2;
+                ctx.arc(x, y, radius, startAngle, endAngle);
+                ctx.shadowBlur = 15;
+                ct.shadowOffsetY = 15;
+                ctx.fillStyle = 'red';
+                ctx.fill();
+            }
+        
+            // Runs each time the DOM window resize event fires.
+            // Resets the canvas dimensions to match window,
+            // then draws the new borders accordingly.
+            function resizeCanvas() {
+                htmlCanvas.width = window.innerWidth;
+                htmlCanvas.height = window.innerHeight;
+                redraw();
+            }
+        
+        })();
+    </script>
 </body>
 </html>

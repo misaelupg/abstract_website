@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('Lora-Regular.eot');
+  src: url('Lora-Regular.woff2') format('woff2'),
+       url('Lora-Regular.woff') format('woff'),
+       url('Lora-Regular.ttf') format('truetype'),
+       url('Lora-Regular.svg#Lora-Regular') format('svg'),
+       url('Lora-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

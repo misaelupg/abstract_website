@@ -1,0 +1,97 @@
+/****************************************************************************/
+/* Colors */
+/****************************************************************************/
+
+$blue: #1e48f0;
+$blue-lighter: #4768f1;
+$blue-darker: #0834ec;
+
+$red: #ff415a;
+$red-ligher: #ff6c80;
+$red-darker: #ff1334;
+
+
+$yellow: #ffc614;
+$yellow-lighter: #ffd143;
+$yellow-darker: #d09d00;
+
+$grey: #fbfcff;
+$grey-lighter: #fff;
+
+/****************************************************************************/
+/* Fonts */
+/****************************************************************************/
+
+/*========== Load Fonts ==========*/
+
+
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url('../fonts/Lora-Regular.eot');
+  src: url('../fonts/Lora-Regular.woff2') format('woff2'),
+       url('../fonts/Lora-Regular.woff') format('woff'),
+       url('../fonts/Lora-Regular.ttf') format('truetype'),
+       url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg'),
+       url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Lora-Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../fonts/Lora-Italic.eot'),
+  url('../fonts/Lora-Italic.woff2') format('woff2'),
+  url('../fonts/Lora-Italic.woff') format('woff'),
+  url('../fonts/Lora-Italic.ttf') format('truetype'),
+  url('../fonts/Lora-Italic.svg#Lora-Italic') format('svg'),
+  url('../fonts/Lora-Italic.eot?#iefix') format('embedded-opentype');
+  
+  
+}
+
+@font-face {
+  font-family: 'PostGrotesk';
+  font-style: normal; 
+  font-weight: 600;
+  src: url('../fonts/PostGrotesk-Medium.eot'),
+  url('../fonts/PostGrotesk-Medium.woff2') format('woff2'),
+  url('../fonts/PostGrotesk-Medium.woff') format('woff'),
+  url('../fonts/PostGrotesk-Medium.ttf') format('truetype'),
+  url('../fonts/PostGrotesk-Medium.svg#PostGrotesk-Medium') format('svg'),
+  url('../fonts/PostGrotesk-Medium.eot?#iefix') format('embedded-opentype');
+  
+  
+}
+
+@font-face {
+  font-family: 'PostGrotesk';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/PostGrotesk-Bold.eot'), 
+  url('../fonts/PostGrotesk-Bold.woff2') format('woff2'),
+  url('../fonts/PostGrotesk-Bold.woff') format('woff'),
+  url('../fonts/PostGrotesk-Bold.ttf') format('truetype'),
+  url('../fonts/PostGrotesk-Bold.svg#Lora-Bold') format('svg'),
+  url('../fonts/PostGrotesk-Bold.eot?#iefix') format('embedded-opentype');
+  
+}
+
+
+$lora: 'Lora-Regular', serif;
+$lora-italic: 'Lora-Italic', serif;
+
+$post-grotesk: 'PostGrotesk', serif;
+
+/*========== Font Sizes ==========*/
+
+$link: 1em;
+
+
+
+
+
+
+
