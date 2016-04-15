@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
 <link rel="stylesheet" type="text/css" href="./css/home.css">
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,43 +16,42 @@
     Cover
     ========================================================================== -->
     <!-- Header -->
-    <header>
-        <nav class="main-nav">
-            <ul>
-                <li class="nav-item active"><a href="">HOME</a></li>
-                <li class="nav-item"><a href="">PORTAFOLIO</a></li>
-                <li class="nav-item"><a href="">LABS</a></li>
-                <li class="nav-item"><a href="">JOURNAL</a></li>
-                <li class="nav-item"><a href="">HUMAN [X]</a></li>
-                <li class="contact-item nav-item"><a href="">&#43; contactar</a></li>
-            </ul><!-- menu -->
-        </nav><!-- nav -->
-    
-    </header><!-- cover -->
-    
-    <!-- Animated Container -->
-    
-    <canvas id="animated-background">
-        <h1>
-            
-        </h1>
-    </canvas>
-
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item active"><a href="">HOME</a></li>
+                    <li class="nav-item"><a href="">PORTAFOLIO</a></li>
+                    <li class="nav-item"><a href="">LABS</a></li>
+                    <li class="nav-item"><a href="">JOURNAL</a></li>
+                    <li class="nav-item"><a href="">HUMAN [X]</a></li>
+                    <li class="contact-item nav-item"><a href="">&#43; contactar</a></li>
+                </ul><!-- menu -->
+            </nav><!-- nav -->
+        </header><!-- cover -->
+        <div class="animation-container">
+            <h1>
+                Creamos experiencias digitales para humanos.
+            </h1>
+            <p>En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
+        </div><!-- animtaion container -->
+    </div><!-- container -->
+    <canvas id="animated-background"></canvas>
 
     <!-- ==========================================================================
     Star Projects
     ========================================================================== -->
     <div class="project-scroll">
         <!-- Project 1 -->
-        <section class="star-project">
+        <section class="star-project container">
             
         </section><!-- comment -->
         <!-- Project 2 -->
-        <section class="star-project">
+        <section class="star-project container">
             
         </section><!-- comment -->
         <!-- Project 3 -->
-        <section class="star-project">
+        <section class="star-project container">
             
         </section><!-- comment -->
     </div><!-- star projects section -->
@@ -106,16 +106,17 @@
                 // call the resizeCanvas() function each time 
                 // the window is resized.
                 window.addEventListener('resize', resizeCanvas, false);
+                window.addEventListener('resize', resizeContainer, false);
                 
                 // Draw canvas border for the first time.
                 resizeCanvas();
+                resizeContainer();
             }
                 
             // Display custom canvas.
             // In this case it's a blue, 5 pixel border that 
             // resizes along with the browser window.                   
             function redraw() {
-
 
                 ctx.beginPath();
                 var x = 100; 
@@ -160,6 +161,10 @@
                 htmlCanvas.width = window.innerWidth;
                 htmlCanvas.height = window.innerHeight - 5;
                 redraw();
+            }
+
+            function resizeContainer() {
+                $('.container').css({'height': window.innerHeight - 5 + 'px'});
             }
         
         })();
