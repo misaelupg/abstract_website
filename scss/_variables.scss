@@ -27,14 +27,16 @@ $grey-lighter: #fff;
 
 @font-face {
   font-family: 'Lora-Regular';
-  src: url('../fonts/Lora-Regular.eot');
-  src: url('../fonts/Lora-Regular.woff2') format('woff2'),
-       url('../fonts/Lora-Regular.woff') format('woff'),
-       url('../fonts/Lora-Regular.ttf') format('truetype'),
-       url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg'),
-       url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Lora-Regular.eot'),
+  url('../fonts/Lora-Regular.woff2') format('woff2'),
+  url('../fonts/Lora-Regular.woff') format('woff'),
+  url('../fonts/Lora-Regular.ttf') format('truetype'),
+  url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg'),
+  url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype');
+  
+  
 }
 
 
@@ -87,7 +89,7 @@ $post-grotesk: 'PostGrotesk', serif;
 
 /*========== Font Sizes ==========*/
 
-$link: 1em;
+$link: .9em;
 
 
 

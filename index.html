@@ -16,12 +16,12 @@
     ========================================================================== -->
     <!-- Header -->
     <header>
-        <nav class="main_nav">
+        <nav class="main-nav">
             <ul>
-                <li class="nav-item"><a href="">HOME</a></li>
+                <li class="nav-item active"><a href="">HOME</a></li>
                 <li class="nav-item"><a href="">PORTAFOLIO</a></li>
                 <li class="nav-item"><a href="">LABS</a></li>
-                <li class="nav-item active"><a href="">JOURNAL</a></li>
+                <li class="nav-item"><a href="">JOURNAL</a></li>
                 <li class="nav-item"><a href="">HUMAN [X]</a></li>
                 <li class="contact-item nav-item"><a href="">&#43; contactar</a></li>
             </ul><!-- menu -->
@@ -32,7 +32,9 @@
     <!-- Animated Container -->
     
     <canvas id="animated-background">
-    
+        <h1>
+            
+        </h1>
     </canvas>
 
 
@@ -114,17 +116,41 @@
             // resizes along with the browser window.                   
             function redraw() {
 
+
                 ctx.beginPath();
-                var x = 50; 
-                var y = 50;
-                var radius = 300;
+                var x = 100; 
+                var y = 210;
+                var radius = 120;
                 var startAngle = 0;
                 var endAngle = Math.PI*2;
                 ctx.arc(x, y, radius, startAngle, endAngle);
-                ctx.shadowBlur = 15;
-                ct.shadowOffsetY = 15;
-                ctx.fillStyle = 'red';
+                ctx.fillStyle = '#1e48f0';
+                ctx.shadowColor = '#032fde';
+                ctx.shadowBlur = 40;
+                ctx.shadowOffsetY = 15;
+                ctx.shadowOffsetX = 0;
                 ctx.fill();
+                ctx.beginPath();
+                ctx.strokeStyle = '#1e48f0';
+                ctx.shadowColor = '#032fde';
+                ctx.shadowBlur = 40;
+                ctx.shadowOffsetY = 15;
+                ctx.shadowOffsetX = 0;
+                ctx.lineWidth = 20;
+                ctx.rotate( 45 * Math.PI / 180 );
+                ctx.strokeRect( 0, 30, 260, 260);
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(100,75);
+                ctx.lineTo(100,25);
+                // ctx.shadowColor = '#d09e00';
+                // ctx.shadowBlur =0 40;
+                // ctx.shadowOffsetY = 15;
+                // ctx.shadowOffsetX = 0;
+                ctx.fill();
+              
+    
+
             }
         
             // Runs each time the DOM window resize event fires.
@@ -132,7 +158,7 @@
             // then draws the new borders accordingly.
             function resizeCanvas() {
                 htmlCanvas.width = window.innerWidth;
-                htmlCanvas.height = window.innerHeight;
+                htmlCanvas.height = window.innerHeight - 5;
                 redraw();
             }
         

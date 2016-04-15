@@ -7,28 +7,24 @@
 /*========== Load Fonts ==========*/
 @font-face {
   font-family: 'Lora-Regular';
-  src: url("Lora-Regular.eot");
-  src: url("../fonts/Lora-Regular.woff2") format("woff2"), url("../fonts/Lora-Regular.woff") format("woff"), url("../fonts/Lora-Regular.ttf") format("truetype"), url("../fonts/Lora-Regular.svg#Lora-Regular") format("svg"), url("../fonts/Lora-Regular.eot?#iefix") format("embedded-opentype");
+  font-style: normal;
   font-weight: normal;
-  font-style: normal; }
+  src: url("../fonts/Lora-Regular.eot"), url("../fonts/Lora-Regular.woff2") format("woff2"), url("../fonts/Lora-Regular.woff") format("woff"), url("../fonts/Lora-Regular.ttf") format("truetype"), url("../fonts/Lora-Regular.svg#Lora-Regular") format("svg"), url("../fonts/Lora-Regular.eot?#iefix") format("embedded-opentype"); }
 @font-face {
   font-family: 'Lora-Italic';
-  src: url("../fonts/Lora-Italic.eot");
-  src: url("../fonts/Lora-Italic.woff2") format("woff2"), url("../fonts/Lora-Italic.woff") format("woff"), url("../fonts/Lora-Italic.ttf") format("truetype"), url("../fonts/Lora-Italic.svg#Lora-Italic") format("svg"), url("../fonts/Lora-Italic.eot?#iefix") format("embedded-opentype");
+  font-style: italic;
   font-weight: normal;
-  font-style: italic; }
+  src: url("../fonts/Lora-Italic.eot"), url("../fonts/Lora-Italic.woff2") format("woff2"), url("../fonts/Lora-Italic.woff") format("woff"), url("../fonts/Lora-Italic.ttf") format("truetype"), url("../fonts/Lora-Italic.svg#Lora-Italic") format("svg"), url("../fonts/Lora-Italic.eot?#iefix") format("embedded-opentype"); }
 @font-face {
   font-family: 'PostGrotesk';
-  src: url("../fonts/PostGrotesk-Medium.eot");
-  src: url("../fonts/PostGrotesk-Medium.woff2") format("woff2"), url("../fonts/PostGrotesk-Medium.woff") format("woff"), url("../fonts/PostGrotesk-Medium.ttf") format("truetype"), url("../fonts/PostGrotesk-Medium.svg#PostGrotesk-Medium") format("svg"), url("../fonts/PostGrotesk-Medium.eot?#iefix") format("embedded-opentype");
+  font-style: normal;
   font-weight: 600;
-  font-style: normal; }
+  src: url("../fonts/PostGrotesk-Medium.eot"), url("../fonts/PostGrotesk-Medium.woff2") format("woff2"), url("../fonts/PostGrotesk-Medium.woff") format("woff"), url("../fonts/PostGrotesk-Medium.ttf") format("truetype"), url("../fonts/PostGrotesk-Medium.svg#PostGrotesk-Medium") format("svg"), url("../fonts/PostGrotesk-Medium.eot?#iefix") format("embedded-opentype"); }
 @font-face {
   font-family: 'PostGrotesk';
-  src: url("../fonts/PostGrotesk-Bold.eot");
-  src: url("../fonts/PostGrotesk-Bold.woff2") format("woff2"), url("../fonts/PostGrotesk-Bold.woff") format("woff"), url("../fonts/PostGrotesk-Bold.ttf") format("truetype"), url("../fonts/PostGrotesk-Bold.svg#Lora-Bold") format("svg"), url("../fonts/PostGrotesk-Bold.eot?#iefix") format("embedded-opentype");
+  font-style: normal;
   font-weight: 900;
-  font-style: normal; }
+  src: url("../fonts/PostGrotesk-Bold.eot"), url("../fonts/PostGrotesk-Bold.woff2") format("woff2"), url("../fonts/PostGrotesk-Bold.woff") format("woff"), url("../fonts/PostGrotesk-Bold.ttf") format("truetype"), url("../fonts/PostGrotesk-Bold.svg#Lora-Bold") format("svg"), url("../fonts/PostGrotesk-Bold.eot?#iefix") format("embedded-opentype"); }
 /*========== Font Sizes ==========*/
 /****************************************************************************/
 /* Delete Default Styles */
@@ -36,8 +32,8 @@
 /*========== List ==========*/
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 body {
   position: relative; }
@@ -46,38 +42,37 @@ body {
 /* Header */
 /****************************************************************************/
 /*========== Nav ==========*/
-.main_nav {
+.main-nav {
+  -webkit-overflow-scrolling: touch;
   display: block;
-  overflow-y: hidden;
   overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; }
-  .main_nav ul {
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .main-nav ul {
     display: block;
     padding-left: 20px;
     position: relative; }
-    .main_nav ul li.nav-item {
+    .main-nav ul li.nav-item {
       display: inline-block;
       padding: 60px 12px 20px 5px; }
-      .main_nav ul li.nav-item a {
-        text-decoration: none; }
-    .main_nav ul li.nav-item, .main_nav ul a {
+    .main-nav ul li.nav-item, .main-nav ul a {
+      -webkit-font-smoothing: antialiased;
       color: #fbfcff;
       font-family: "PostGrotesk", serif;
-      font-weight: 600;
-      -webkit-font-smoothing: antialiased;
+      font-size: 0.9em;
       font-smoothing: antialiased;
-      letter-spacing: 4px;
-      font-size: 1em;
-      position: relative; }
-    .main_nav ul .active a::after {
-      content: '';
-      width: 40px;
-      height: 4px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      position: relative;
+      text-decoration: none; }
+    .main-nav ul .active a::after {
       background: #fbfcff;
+      content: '';
+      height: 2px;
+      left: 0;
       position: absolute;
       top: 28px;
-      left: 0px; }
+      width: 30px; }
 
 /****************************************************************************/
 /* Animated Background */

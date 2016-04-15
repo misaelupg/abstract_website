@@ -9,8 +9,9 @@
 
 ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  
 } 
 
 body {
@@ -23,43 +24,45 @@ body {
 
 /*========== Nav ==========*/
 
-.main_nav {
-  display: block;
-  overflow-y: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
+.main-nav {
   -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  
+  
+
   ul {
     display: block;
     padding-left: 20px;
     position: relative;
+
     li.nav-item {
       display: inline-block;
       padding: 60px 12px 20px 5px;
-      a {
-        text-decoration: none;
-      }
-      
     }
+
     li.nav-item, a {
+      -webkit-font-smoothing: antialiased;
       color: $grey;
       font-family: $post-grotesk;
-      font-weight: 600;
-      -webkit-font-smoothing: antialiased;
-      font-smoothing: antialiased;
-      letter-spacing: 4px;
       font-size: $link;
+      font-smoothing: antialiased;
+      font-weight: 600;
+      letter-spacing: 6px;
       position: relative;
+      text-decoration: none;
     }
     .active {
       a::after {
-        content:''; 
-        width:40px; 
-        height:4px; 
-        background:$grey; 
-        position:absolute; 
+        background: $grey;
+        content: ''; 
+        height: 2px;
+        left: 0;
+        position: absolute;
         top: 28px;
-        left: 0px;
+        width: 30px;
       }
     }
   }
