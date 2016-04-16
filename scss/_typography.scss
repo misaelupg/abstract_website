@@ -1,0 +1,12 @@
+@mixin nav-item($letter-spacing, $font-weight) {
+    -webkit-font-smoothing: antialiased;
+    color: $grey;
+    font-family: $post-grotesk;
+    font-size: $link;
+    font-smoothing: antialiased;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}

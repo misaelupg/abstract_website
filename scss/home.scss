@@ -1,5 +1,7 @@
 @import 'variables';
 
+@import 'typography';
+
 
 /****************************************************************************/
 /* Delete Default Styles */
@@ -34,6 +36,23 @@ body {
 .container {
   padding: 0 7% 0 7%;
   min-height: 247px;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 20px;
+  justify-content: space-between;
+  img {
+    max-height: 20px;
+    order: -2;
+    flex-basis: auto;
+    margin-bottom: 10px;
+  }
+  a{
+    @include nav-item(0, 900);
+    order: -1;
+  }
 }
 
 /*========== Star Project 1 ==========*/
@@ -72,7 +91,11 @@ body {
 /* NAVIGATION */
 /****************************************************************************/
 
-/*========== Header ==========*/
+/*========== Fixed Nav Nav ==========*/
+
+
+
+/*========== Main Nav ==========*/
 
 .main-nav {
   -webkit-overflow-scrolling: touch;
@@ -86,20 +109,11 @@ body {
     position: relative;
 
     li.nav-item {
-      display: inline-block;
-      padding: 60px 12px 20px 0;
+      padding: 10px 12px 20px 0;
     }
 
     li.nav-item, a {
-      -webkit-font-smoothing: antialiased;
-      color: $grey;
-      font-family: $post-grotesk;
-      font-size: $link;
-      font-smoothing: antialiased;
-      font-weight: 600;
-      letter-spacing: 6px;
-      position: relative;
-      text-decoration: none;
+      @include nav-item(6px, 600);
     }
     .active {
       a::after {
