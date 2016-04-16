@@ -29,6 +29,13 @@
 /****************************************************************************/
 /* Delete Default Styles */
 /****************************************************************************/
+/*========== Common Fixes ==========*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 /*========== List ==========*/
 ul {
   list-style: none;
@@ -42,7 +49,17 @@ body {
 /* Layout */
 /****************************************************************************/
 .container {
-  padding: 0 7% 0 7%; }
+  padding: 0 7% 0 7%;
+  min-height: 247px; }
+
+/*========== Star Project 1 ==========*/
+.star-project {
+  padding-top: 100px; }
+  .star-project img {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: block; }
 
 /****************************************************************************/
 /* Color */
@@ -60,9 +77,9 @@ body {
   height: 300px; }
 
 /****************************************************************************/
-/* Header */
+/* NAVIGATION */
 /****************************************************************************/
-/*========== Nav ==========*/
+/*========== Header ==========*/
 .main-nav {
   -webkit-overflow-scrolling: touch;
   display: block;
@@ -95,7 +112,7 @@ body {
       width: 30px; }
 
 /****************************************************************************/
-/* Cover */
+/* ANIMATIONS */
 /****************************************************************************/
 /*========== Animated Background ==========*/
 #animated-background {
@@ -103,7 +120,8 @@ body {
   top: 0px;
   left: 0;
   z-index: -1;
-  background-color: #1e48f0; }
+  background-color: #1e48f0;
+  min-height: 247px; }
 
 /*========== Text ==========*/
 .animation-container h1 {

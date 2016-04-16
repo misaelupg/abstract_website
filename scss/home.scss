@@ -5,6 +5,14 @@
 /* Delete Default Styles */
 /****************************************************************************/
 
+/*========== Common Fixes ==========*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /*========== List ==========*/
 
 ul {
@@ -25,6 +33,19 @@ body {
 
 .container {
   padding: 0 7% 0 7%;
+  min-height: 247px;
+}
+
+/*========== Star Project 1 ==========*/
+
+.star-project {
+  padding-top: 100px;
+  img {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 
@@ -48,10 +69,10 @@ body {
 }
 
 /****************************************************************************/
-/* Header */
+/* NAVIGATION */
 /****************************************************************************/
 
-/*========== Nav ==========*/
+/*========== Header ==========*/
 
 .main-nav {
   -webkit-overflow-scrolling: touch;
@@ -59,8 +80,6 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  
-  
 
   ul {
     display: block;
@@ -98,7 +117,7 @@ body {
 
 
 /****************************************************************************/
-/* Cover */
+/* ANIMATIONS */
 /****************************************************************************/
 
 /*========== Animated Background ==========*/
@@ -109,6 +128,7 @@ body {
   left: 0;
   z-index: -1;
   background-color: $blue;
+  min-height: 247px;
 }
 
 /*========== Text ==========*/

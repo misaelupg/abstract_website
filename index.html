@@ -4,11 +4,13 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#1e48f0">
 <title>ABSTRACT | Agencia Digital | Software, Diseño, Marketing, Innovación Tecnológica, Data</title>
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
 <link rel="stylesheet" type="text/css" href="./css/home.css">
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -33,7 +35,7 @@
             <h1>
                 Creamos experiencias digitales para humanos.
             </h1>
-            <p>En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
+            <p >En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
         </div><!-- animtaion container -->
     </div><!-- container -->
     <canvas id="animated-background"></canvas>
@@ -44,7 +46,7 @@
     <div class="project-scroll">
         <!-- Project 1 -->
         <section class="star-project container">
-            
+            <img src="./svg/apple_watch_white.svg" alt="">
         </section><!-- comment -->
         <!-- Project 2 -->
         <section class="star-project container">
@@ -86,6 +88,7 @@
     </footer><!-- footer -->
 
     <script>
+
         (function() {
             var 
                 // Obtain a reference to the canvas element
@@ -164,8 +167,12 @@
             }
 
             function resizeContainer() {
-                $('.container').css({'height': window.innerHeight - 5 + 'px'});
+                if (window.innerHeight > 500) {
+                    $('.container').css({'height': window.innerHeight - 5 + 'px'});
+                }
+                
             }
+
         
         })();
     </script>
