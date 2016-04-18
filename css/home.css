@@ -85,23 +85,48 @@ header {
 
 /*========== Star Project 1 ==========*/
 .star-project {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   padding-top: 80px; }
   .star-project img.device {
     width: 70%;
     height: 70%;
     margin: 0 auto;
     display: block; }
+  .star-project .copy {
+    position: absolute;
+    bottom: 30px;
+    padding-right: 7%; }
+    .star-project .copy h1 {
+      font-size: 3em;
+      color: #fbfcff;
+      font-weight: 900;
+      font-family: "PostGrotesk", serif;
+      display: inline-block;
+      margin: 0; }
+    .star-project .copy img.arrow {
+      max-width: 20px;
+      display: inline-block;
+      margin-left: 1em;
+      padding-bottom: 0.3em; }
+    .star-project .copy p {
+      font-family: "Lora-Regular", serif;
+      color: #fbfcff;
+      letter-spacing: 1px;
+      font-size: 0.8em;
+      margin: 0.3em 0;
+      line-height: 1.5em;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased; }
 
 /****************************************************************************/
 /* Color */
 /****************************************************************************/
 .star-project:first-child {
-  background-color: #ffc614;
-  height: 300px; }
+  background-color: #ffc614; }
 
 .star-project:nth-child(2) {
-  background-color: #503cfe;
-  height: 300px; }
+  background-color: #503cfe; }
 
 .star-project:nth-child(3) {
   background-color: #ff415a;
@@ -112,34 +137,6 @@ header {
 /****************************************************************************/
 /* TYPOGRAPHY */
 /****************************************************************************/
-.project-scroll {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
-  .project-scroll h1 {
-    font-size: 3em;
-    color: #fbfcff;
-    font-weight: 900;
-    font-family: "PostGrotesk", serif;
-    display: inline-block;
-    margin-bottom: 0; }
-  .project-scroll .copy {
-    position: absolute;
-    bottom: 1em; }
-    .project-scroll .copy img.arrow {
-      max-width: 20px;
-      display: inline-block;
-      margin-left: 1em;
-      padding-bottom: 0.3em; }
-    .project-scroll .copy p {
-      font-family: "Lora-Regular", serif;
-      color: #fbfcff;
-      letter-spacing: 1px;
-      font-size: 0.8em;
-      margin: 0.3em 0;
-      line-height: 1.5em;
-      -webkit-font-smoothing: antialiased;
-      font-smoothing: antialiased; }
-
 /****************************************************************************/
 /* NAVIGATION */
 /****************************************************************************/
