@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'typography';
+@import 'elements';
 
 
 /****************************************************************************/
@@ -12,6 +14,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 
 /*========== List ==========*/
 
@@ -33,14 +36,42 @@ body {
 
 .container {
   padding: 0 7% 0 7%;
-  min-height: 247px;
+  // min-height: 247px;
+  position: relative;
 }
+
+header {
+  @include sexy-text();
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 20px;
+  justify-content: space-between;
+  img.logo {
+    max-height: 20px;
+    order: -2;
+    flex-basis: auto;
+    margin-bottom: 10px;
+  }
+  a{
+    @include nav-item(0, 900);
+    order: -1;
+  }
+}
+
+/*========== Journal Landing ==========*/
+.card {
+  @include card();
+  height: 300px;
+  width: 100%;
+  background-color: $grey_lighter;
+}
+
 
 /*========== Star Project 1 ==========*/
 
 .star-project {
-  padding-top: 100px;
-  img {
+  padding-top: 80px;
+  img.device {
     width: 70%;
     height: 70%;
     margin: 0 auto;
@@ -66,13 +97,49 @@ body {
 .star-project:nth-child(3) {
   background-color: $red;
   height: 300px;
+  img.arrow {
+    color: $grey;
+  }
+}
+
+
+/****************************************************************************/
+/* TYPOGRAPHY */
+/****************************************************************************/
+
+.project-scroll {
+    @include sexy-text();
+    h1 {
+      @include big-short-headline($grey);
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    .copy {
+      position: absolute;
+      bottom: 1em;
+      img.arrow {
+        max-width: 20px;
+        display: inline-block;
+        margin-left: 1em;
+        padding-bottom: 0.3em;
+      }
+      p {
+        @include project-description($grey);
+        @include sexy-text();
+    
+      }
+    }
 }
 
 /****************************************************************************/
 /* NAVIGATION */
 /****************************************************************************/
 
-/*========== Header ==========*/
+/*========== Fixed Top Nav ==========*/
+
+
+/*========== Main Nav ==========*/
 
 .main-nav {
   -webkit-overflow-scrolling: touch;
@@ -86,26 +153,17 @@ body {
     position: relative;
 
     li.nav-item {
-      display: inline-block;
-      padding: 60px 12px 20px 0;
+      padding: 10px 12px 20px 0;
     }
 
     li.nav-item, a {
-      -webkit-font-smoothing: antialiased;
-      color: $grey;
-      font-family: $post-grotesk;
-      font-size: $link;
-      font-smoothing: antialiased;
-      font-weight: 600;
-      letter-spacing: 6px;
-      position: relative;
-      text-decoration: none;
+      @include nav-item(6px, 600);
     }
     .active {
       a::after {
         background: $grey;
         content: ''; 
-        height: 2px;
+        height: 3px;
         left: 0;
         position: absolute;
         top: 28px;
@@ -123,7 +181,7 @@ body {
 /*========== Animated Background ==========*/
 
 #animated-background {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0;
   z-index: -1;
@@ -153,3 +211,29 @@ body {
     color: $grey;
   }
 }
+
+
+/****************************************************************************/
+/* Media Queries */
+/****************************************************************************/
+
+/*========== Desktop ==========*/
+
+// @media screen and (min-width: 1000px) {
+//   header {
+//   display: flex;
+//   flex-flow: row wrap;
+//   padding-top: 20px;
+//   justify-content: space-between;
+//   img.logo {
+//     max-height: 20px;
+//     order: -2;
+//     flex-basis: auto;
+//     margin-bottom: 10px;
+//   }
+//   a{
+//     @include nav-item(0, 900);
+//     order: -1;
+//   }
+// }
+// }

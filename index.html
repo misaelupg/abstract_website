@@ -19,7 +19,10 @@
     ========================================================================== -->
     <!-- Header -->
     <div class="container">
-        <header>
+        <header class="header">
+            
+            <img class="logo" src="./img/logo_placeholder.png">
+
             <nav class="main-nav">
                 <ul>
                     <li class="nav-item active"><a href="">HOME</a></li>
@@ -27,9 +30,9 @@
                     <li class="nav-item"><a href="">LABS</a></li>
                     <li class="nav-item"><a href="">JOURNAL</a></li>
                     <li class="nav-item"><a href="">HUMAN [X]</a></li>
-                    <li class="contact-item nav-item"><a href="">&#43; contactar</a></li>
                 </ul><!-- menu -->
             </nav><!-- nav -->
+            <a class="nav-item"href="">&#43; contactar</a>
         </header><!-- cover -->
         <div class="animation-container">
             <h1>
@@ -46,15 +49,27 @@
     <div class="project-scroll">
         <!-- Project 1 -->
         <section class="star-project container">
-            <img src="./svg/apple_watch_white.svg" alt="">
+            <img class="device" src="./svg/apple_watch_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
         <!-- Project 2 -->
         <section class="star-project container">
-            
+            <img class="device" src="./svg/apple_iphone_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
         <!-- Project 3 -->
         <section class="star-project container">
-            
+            <img class="device" src="./svg/apple_watch_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow_white.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
     </div><!-- star projects section -->
 
@@ -62,13 +77,13 @@
     Landing
     ========================================================================== -->
     <div id="landing">
-        <section>
+        <section id="journal-section"  class="container">
+            <div class="card"></div>
+        </section>
+        <section id="disciplines-section" class="container"> 
             
         </section>
-        <section>
-            
-        </section>
-        <section>
+        <section id="humans-section" class="container">
             
         </section>
     </div><!-- landing -->
@@ -167,9 +182,9 @@
             }
 
             function resizeContainer() {
-                if (window.innerHeight > 500) {
+                // if (window.innerHeight > 500) {
                     $('.container').css({'height': window.innerHeight - 5 + 'px'});
-                }
+                // }
                 
             }
 
