@@ -50,35 +50,43 @@ body {
 /****************************************************************************/
 .container {
   padding: 0 7% 0 7%;
-  min-height: 247px; }
+  position: relative; }
 
 header {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   display: flex;
   flex-flow: row wrap;
   padding-top: 20px;
   justify-content: space-between; }
-  header img {
+  header img.logo {
     max-height: 20px;
     order: -2;
     flex-basis: auto;
     margin-bottom: 10px; }
   header a {
-    -webkit-font-smoothing: antialiased;
     color: #fbfcff;
     font-family: "PostGrotesk", serif;
     font-size: 0.9em;
-    font-smoothing: antialiased;
     font-weight: 900;
     letter-spacing: 0;
     position: relative;
-    text-decoration: none;
     display: inline-block;
+    text-decoration: none;
     order: -1; }
+
+/*========== Journal Landing ==========*/
+.card {
+  -webkit-box-shadow: 0 50px 80px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 50px 80px 0 rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 100%;
+  background-color: #fff; }
 
 /*========== Star Project 1 ==========*/
 .star-project {
-  padding-top: 100px; }
-  .star-project img {
+  padding-top: 80px; }
+  .star-project img.device {
     width: 70%;
     height: 70%;
     margin: 0 auto;
@@ -98,11 +106,44 @@ header {
 .star-project:nth-child(3) {
   background-color: #ff415a;
   height: 300px; }
+  .star-project:nth-child(3) img.arrow {
+    color: #fbfcff; }
+
+/****************************************************************************/
+/* TYPOGRAPHY */
+/****************************************************************************/
+.project-scroll {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+  .project-scroll h1 {
+    font-size: 3em;
+    color: #fbfcff;
+    font-weight: 900;
+    font-family: "PostGrotesk", serif;
+    display: inline-block;
+    margin-bottom: 0; }
+  .project-scroll .copy {
+    position: absolute;
+    bottom: 1em; }
+    .project-scroll .copy img.arrow {
+      max-width: 20px;
+      display: inline-block;
+      margin-left: 1em;
+      padding-bottom: 0.3em; }
+    .project-scroll .copy p {
+      font-family: "Lora-Regular", serif;
+      color: #fbfcff;
+      letter-spacing: 1px;
+      font-size: 0.8em;
+      margin: 0.3em 0;
+      line-height: 1.5em;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased; }
 
 /****************************************************************************/
 /* NAVIGATION */
 /****************************************************************************/
-/*========== Fixed Nav Nav ==========*/
+/*========== Fixed Top Nav ==========*/
 /*========== Main Nav ==========*/
 .main-nav {
   -webkit-overflow-scrolling: touch;
@@ -116,20 +157,18 @@ header {
     .main-nav ul li.nav-item {
       padding: 10px 12px 20px 0; }
     .main-nav ul li.nav-item, .main-nav ul a {
-      -webkit-font-smoothing: antialiased;
       color: #fbfcff;
       font-family: "PostGrotesk", serif;
       font-size: 0.9em;
-      font-smoothing: antialiased;
       font-weight: 600;
       letter-spacing: 6px;
       position: relative;
-      text-decoration: none;
-      display: inline-block; }
+      display: inline-block;
+      text-decoration: none; }
     .main-nav ul .active a::after {
       background: #fbfcff;
       content: '';
-      height: 2px;
+      height: 3px;
       left: 0;
       position: absolute;
       top: 28px;
@@ -140,7 +179,7 @@ header {
 /****************************************************************************/
 /*========== Animated Background ==========*/
 #animated-background {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0;
   z-index: -1;
@@ -161,5 +200,10 @@ header {
   line-height: 22px; }
 .animation-container h1, .animation-container p {
   color: #fbfcff; }
+
+/****************************************************************************/
+/* Media Queries */
+/****************************************************************************/
+/*========== Desktop ==========*/
 
 /*# sourceMappingURL=home.css.map */

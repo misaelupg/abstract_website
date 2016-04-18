@@ -1,12 +1,32 @@
-@mixin nav-item($letter-spacing, $font-weight) {
+@mixin sexy-text() {
     -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+@mixin nav-item($letter-spacing, $font-weight) {
     color: $grey;
     font-family: $post-grotesk;
     font-size: $link;
-    font-smoothing: antialiased;
     font-weight: $font-weight;
     letter-spacing: $letter-spacing;
     position: relative;
-    text-decoration: none;
     display: inline-block;
+    text-decoration: none;
 }
+
+@mixin big-short-headline($color) {
+    font-size: $h1-big;
+    color: $color;
+    font-weight: 900;
+    font-family: $post-grotesk;
+}
+
+@mixin project-description($color) {
+    font-family: $lora;
+    color: $color;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    margin: 0.3em 0;
+    line-height: 1.5em;
+}
+

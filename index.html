@@ -21,7 +21,8 @@
     <div class="container">
         <header class="header">
             
-            <img src="./img/logo_placeholder.png">
+            <img class="logo" src="./img/logo_placeholder.png">
+
             <nav class="main-nav">
                 <ul>
                     <li class="nav-item active"><a href="">HOME</a></li>
@@ -48,15 +49,27 @@
     <div class="project-scroll">
         <!-- Project 1 -->
         <section class="star-project container">
-            <img src="./svg/apple_watch_white.svg" alt="">
+            <img class="device" src="./svg/apple_watch_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
         <!-- Project 2 -->
         <section class="star-project container">
-            
+            <img class="device" src="./svg/apple_iphone_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
         <!-- Project 3 -->
         <section class="star-project container">
-            
+            <img class="device" src="./svg/apple_watch_white.svg" alt="">
+            <div class="copy">
+                <a href=""><h1>news</h1><img  class="arrow" src="./svg/arrow_white.svg" alt=""></a>
+                <p>This is just a very small description about this little project.</p>
+            </div>
         </section><!-- comment -->
     </div><!-- star projects section -->
 
@@ -64,13 +77,13 @@
     Landing
     ========================================================================== -->
     <div id="landing">
-        <section>
+        <section id="journal-section"  class="container">
+            <div class="card"></div>
+        </section>
+        <section id="disciplines-section" class="container"> 
             
         </section>
-        <section>
-            
-        </section>
-        <section>
+        <section id="humans-section" class="container">
             
         </section>
     </div><!-- landing -->
@@ -169,9 +182,9 @@
             }
 
             function resizeContainer() {
-                if (window.innerHeight > 500) {
+                // if (window.innerHeight > 500) {
                     $('.container').css({'height': window.innerHeight - 5 + 'px'});
-                }
+                // }
                 
             }
 
