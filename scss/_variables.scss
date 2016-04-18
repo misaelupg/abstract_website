@@ -35,8 +35,6 @@ $grey-lighter: #fff;
   url('../fonts/Lora-Regular.ttf') format('truetype'),
   url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg'),
   url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype');
-  
-  
 }
 
 
@@ -78,7 +76,6 @@ $grey-lighter: #fff;
   url('../fonts/PostGrotesk-Bold.ttf') format('truetype'),
   url('../fonts/PostGrotesk-Bold.svg#Lora-Bold') format('svg'),
   url('../fonts/PostGrotesk-Bold.eot?#iefix') format('embedded-opentype');
-  
 }
 
 
@@ -90,7 +87,7 @@ $post-grotesk: 'PostGrotesk', serif;
 /*========== Font Sizes ==========*/
 
 $link: .9em;
-
+$h1-big: 3em;
 
 
 
