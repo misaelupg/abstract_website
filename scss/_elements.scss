@@ -1,4 +1,18 @@
-@mixin card() {
+@mixin card($height, $width, $bg-color) {
     -webkit-box-shadow: 0 50px 80px 0 rgba(0,0,0,.2);
     box-shadow: 0 50px 80px 0 rgba(0,0,0,.2);
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+}
+
+@mixin make-circle($radius, $color, $left, $bottom) {
+    width: $radius;
+    height: $radius;
+    border-radius: 100%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    left: $left;
+    bottom: $bottom;
+    border: 100px solid $color;
 }

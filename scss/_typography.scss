@@ -14,19 +14,26 @@
     text-decoration: none;
 }
 
-@mixin big-short-headline($color) {
+@mixin big-short-headline() {
     font-size: $h1-big;
-    color: $color;
     font-weight: 900;
     font-family: $post-grotesk;
 }
 
-@mixin project-description($color) {
+@mixin lora-paragraph() {
     font-family: $lora;
-    color: $color;
     letter-spacing: 1px;
     font-size: 0.8em;
     margin: 0.3em 0;
-    line-height: 1.5em;
+    line-height: $line-height-small;
 }
 
+@mixin styled-text($color) {
+    $color: $color;
+    letter-spacing: 8px;
+    font-size: 0.5em;
+    font-weight: 900;
+    transform: rotate(0.25turn);
+    position: absolute;
+    font-family: $post-grotesk;
+}
