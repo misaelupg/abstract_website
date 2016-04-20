@@ -34,14 +34,14 @@
             </nav><!-- nav -->
             <a class="nav-item"href="">&#43; contactar</a>
         </header><!-- cover -->
-        <div class="animation-container">
+        <div class="cover-text">
             <h1>
                 Creamos experiencias digitales para humanos.
             </h1>
             <p >En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
         </div><!-- animtaion container -->
     </div><!-- container -->
-    <canvas id="animated-background"></canvas>
+    <!-- <canvas id="animated-background"></canvas> -->
 
     <!-- ==========================================================================
     Star Projects
@@ -111,14 +111,14 @@
     <script>
 
         (function() {
-            var 
+            // var 
                 // Obtain a reference to the canvas element
                 // using its id.
-                htmlCanvas = document.getElementById('animated-background'),
+                // htmlCanvas = document.getElementById('animated-background'),
             
-                // Obtain a graphics ctx on the
-                // canvas element for drawing.
-                ctx = htmlCanvas.getContext('2d');
+                // // Obtain a graphics ctx on the
+                // // canvas element for drawing.
+                // ctx = htmlCanvas.getContext('2d');
 
  
             // Start listening to resize events and
@@ -129,18 +129,18 @@
                 // Register an event listener to
                 // call the resizeCanvas() function each time 
                 // the window is resized.
-                window.addEventListener('resize', resizeCanvas, false);
+                // window.addEventListener('resize', resizeCanvas, false);
                 window.addEventListener('resize', resizeContainer, false);
                 
                 // Draw canvas border for the first time.
-                resizeCanvas();
+                // resizeCanvas();
                 resizeContainer();
             }
                 
             // Display custom canvas.
             // In this case it's a blue, 5 pixel border that 
             // resizes along with the browser window.                   
-            function redraw() {
+            // function redraw() {
 
                 // ctx.beginPath();
                 // var x = 100; 
@@ -173,34 +173,34 @@
                 // // ctx.shadowOffsetY = 15;
                 // // ctx.shadowOffsetX = 0;
                 // ctx.fill();
-                ctx.save();
-                ctx.scale(0.2,0.2);
-                ctx.beginPath();
-                ctx.moveTo(0,0);
-                ctx.lineTo(2305,0);
-                ctx.lineTo(2305,1553);
-                ctx.lineTo(0,1553);
-                ctx.closePath();
-                ctx.clip();
-                ctx.translate(0,0);
-                ctx.translate(0,0);
-                ctx.scale(1,1);
-                ctx.translate(0,0);
-                ctx.strokeStyle = 'rgba(0,0,0,0)';
-                ctx.lineCap = 'butt';
-                ctx.lineJoin = 'miter';
-                ctx.miterLimit = 4;
-                ctx.save();
-                ctx.restore();
-                ctx.save();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "rgba(0, 0, 0, 0)";
-                ctx.strokeStyle = "rgba(0, 0, 0, 0)";
-                ctx.lineWidth = 1;
-                ctx.save();
-                ctx.translate(-10,-10);
-                ctx.save();
+                // ctx.save();
+                // ctx.scale(0.2,0.2);
+                // ctx.beginPath();
+                // ctx.moveTo(0,0);
+                // ctx.lineTo(2305,0);
+                // ctx.lineTo(2305,1553);
+                // ctx.lineTo(0,1553);
+                // ctx.closePath();
+                // ctx.clip();
+                // ctx.translate(0,0);
+                // ctx.translate(0,0);
+                // ctx.scale(1,1);
+                // ctx.translate(0,0);
+                // ctx.strokeStyle = 'rgba(0,0,0,0)';
+                // ctx.lineCap = 'butt';
+                // ctx.lineJoin = 'miter';
+                // ctx.miterLimit = 4;
+                // ctx.save();
+                // ctx.restore();
+                // ctx.save();
+                // ctx.restore();
+                // ctx.save();
+                // ctx.fillStyle = "rgba(0, 0, 0, 0)";
+                // ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+                // ctx.lineWidth = 1;
+                // ctx.save();
+                // ctx.translate(-10,-10);
+                // ctx.save();
                 // ctx.fillStyle = "#1e48f0";
                 // ctx.beginPath();
                 // ctx.moveTo(909.002625,1560);
@@ -215,149 +215,149 @@
                 // ctx.shadowOffsetX = 0;
                 // ctx.fill();
                 // ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.strokeStyle = "#1e48f0";
-                ctx.lineWidth = 50;
-                ctx.translate(1623.191163,654.191163);
-                ctx.translate(0,0);
-                ctx.rotate(-5.497787143782138);
-                ctx.translate(0,0);
-                ctx.translate(-1623.191163,-654.191163);
-                ctx.beginPath();
-                ctx.moveTo(1322.54484,269.544843);
-                ctx.lineTo(1923.837479,269.544843);
-                ctx.quadraticCurveTo(2007.837479,269.544843,2007.837479,353.544843);
-                ctx.lineTo(2007.837479,954.8374819999999);
-                ctx.quadraticCurveTo(2007.837479,1038.837482,1923.837479,1038.837482);
-                ctx.lineTo(1322.54484,1038.837482);
-                ctx.quadraticCurveTo(1238.54484,1038.837482,1238.54484,954.8374819999999);
-                ctx.lineTo(1238.54484,353.544843);
-                ctx.quadraticCurveTo(1238.54484,269.544843,1322.54484,269.544843);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#1e48f0";
-                ctx.beginPath();
-                ctx.arc(1028.21912,654.219121,383,0,6.283185307179586,true);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#ff415a";
-                ctx.beginPath();
-                ctx.moveTo(1822,610);
-                ctx.lineTo(1398,1051);
-                ctx.lineTo(1906,1560);
-                ctx.lineTo(2019,1560);
-                ctx.lineTo(2019,610);
-                ctx.lineTo(1822,610);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#ffc614";
-                ctx.beginPath();
-                ctx.moveTo(1399,1051.56176);
-                ctx.lineTo(1908.00098,1560.56274);
-                ctx.lineTo(908,1560.56274);
-                ctx.lineTo(1399,1051.56176);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#ffc614";
-                ctx.beginPath();
-                ctx.moveTo(1389.46068,1220.56176);
-                ctx.lineTo(1731,1562.10108);
-                ctx.lineTo(1060,1562.10108);
-                ctx.lineTo(1389.46068,1220.56176);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.strokeStyle = "#1e48f0";
-                ctx.lineWidth = 50;
-                ctx.translate(655,655);
-                ctx.translate(0,0);
-                ctx.rotate(-5.497787143782138);
-                ctx.translate(0,0);
-                ctx.translate(-655,-655);
-                ctx.beginPath();
-                ctx.moveTo(276,192);
-                ctx.lineTo(1034,192);
-                ctx.quadraticCurveTo(1118,192,1118,276);
-                ctx.lineTo(1118,1034);
-                ctx.quadraticCurveTo(1118,1118,1034,1118);
-                ctx.lineTo(276,1118);
-                ctx.quadraticCurveTo(192,1118,192,1034);
-                ctx.lineTo(192,276);
-                ctx.quadraticCurveTo(192,192,276,192);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#ff415a";
-                ctx.translate(1914.728035,1054.728035);
-                ctx.translate(0,0);
-                ctx.rotate(-5.497787143782138);
-                ctx.translate(0,0);
-                ctx.translate(-1914.728035,-1054.728035);
-                ctx.beginPath();
-                ctx.moveTo(1632.07763,772.077631);
-                ctx.lineTo(2197.3784379999997,772.077631);
-                ctx.quadraticCurveTo(2197.3784379999997,772.077631,2197.3784379999997,772.077631);
-                ctx.lineTo(2197.3784379999997,1337.378439);
-                ctx.quadraticCurveTo(2197.3784379999997,1337.378439,2197.3784379999997,1337.378439);
-                ctx.lineTo(1632.07763,1337.378439);
-                ctx.quadraticCurveTo(1632.07763,1337.378439,1632.07763,1337.378439);
-                ctx.lineTo(1632.07763,772.077631);
-                ctx.quadraticCurveTo(1632.07763,772.077631,1632.07763,772.077631);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.save();
-                ctx.fillStyle = "#ff415a";
-                ctx.translate(1914.481205,1055.481205);
-                ctx.translate(0,0);
-                ctx.rotate(-5.497787143782138);
-                ctx.translate(0,0);
-                ctx.translate(-1914.481205,-1055.481205);
-                ctx.beginPath();
-                ctx.moveTo(1764.94141,905.941411);
-                ctx.lineTo(2064.020998,905.941411);
-                ctx.quadraticCurveTo(2064.020998,905.941411,2064.020998,905.941411);
-                ctx.lineTo(2064.020998,1205.020999);
-                ctx.quadraticCurveTo(2064.020998,1205.020999,2064.020998,1205.020999);
-                ctx.lineTo(1764.94141,1205.020999);
-                ctx.quadraticCurveTo(1764.94141,1205.020999,1764.94141,1205.020999);
-                ctx.lineTo(1764.94141,905.941411);
-                ctx.quadraticCurveTo(1764.94141,905.941411,1764.94141,905.941411);
-                ctx.closePath();
-                ctx.fill();
-                ctx.stroke();
-                ctx.restore();
-                ctx.restore();
-                ctx.restore();
-                ctx.restore();
-            }
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.strokeStyle = "#1e48f0";
+            //     ctx.lineWidth = 50;
+            //     ctx.translate(1623.191163,654.191163);
+            //     ctx.translate(0,0);
+            //     ctx.rotate(-5.497787143782138);
+            //     ctx.translate(0,0);
+            //     ctx.translate(-1623.191163,-654.191163);
+            //     ctx.beginPath();
+            //     ctx.moveTo(1322.54484,269.544843);
+            //     ctx.lineTo(1923.837479,269.544843);
+            //     ctx.quadraticCurveTo(2007.837479,269.544843,2007.837479,353.544843);
+            //     ctx.lineTo(2007.837479,954.8374819999999);
+            //     ctx.quadraticCurveTo(2007.837479,1038.837482,1923.837479,1038.837482);
+            //     ctx.lineTo(1322.54484,1038.837482);
+            //     ctx.quadraticCurveTo(1238.54484,1038.837482,1238.54484,954.8374819999999);
+            //     ctx.lineTo(1238.54484,353.544843);
+            //     ctx.quadraticCurveTo(1238.54484,269.544843,1322.54484,269.544843);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#1e48f0";
+            //     ctx.beginPath();
+            //     ctx.arc(1028.21912,654.219121,383,0,6.283185307179586,true);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#ff415a";
+            //     ctx.beginPath();
+            //     ctx.moveTo(1822,610);
+            //     ctx.lineTo(1398,1051);
+            //     ctx.lineTo(1906,1560);
+            //     ctx.lineTo(2019,1560);
+            //     ctx.lineTo(2019,610);
+            //     ctx.lineTo(1822,610);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#ffc614";
+            //     ctx.beginPath();
+            //     ctx.moveTo(1399,1051.56176);
+            //     ctx.lineTo(1908.00098,1560.56274);
+            //     ctx.lineTo(908,1560.56274);
+            //     ctx.lineTo(1399,1051.56176);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#ffc614";
+            //     ctx.beginPath();
+            //     ctx.moveTo(1389.46068,1220.56176);
+            //     ctx.lineTo(1731,1562.10108);
+            //     ctx.lineTo(1060,1562.10108);
+            //     ctx.lineTo(1389.46068,1220.56176);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.strokeStyle = "#1e48f0";
+            //     ctx.lineWidth = 50;
+            //     ctx.translate(655,655);
+            //     ctx.translate(0,0);
+            //     ctx.rotate(-5.497787143782138);
+            //     ctx.translate(0,0);
+            //     ctx.translate(-655,-655);
+            //     ctx.beginPath();
+            //     ctx.moveTo(276,192);
+            //     ctx.lineTo(1034,192);
+            //     ctx.quadraticCurveTo(1118,192,1118,276);
+            //     ctx.lineTo(1118,1034);
+            //     ctx.quadraticCurveTo(1118,1118,1034,1118);
+            //     ctx.lineTo(276,1118);
+            //     ctx.quadraticCurveTo(192,1118,192,1034);
+            //     ctx.lineTo(192,276);
+            //     ctx.quadraticCurveTo(192,192,276,192);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#ff415a";
+            //     ctx.translate(1914.728035,1054.728035);
+            //     ctx.translate(0,0);
+            //     ctx.rotate(-5.497787143782138);
+            //     ctx.translate(0,0);
+            //     ctx.translate(-1914.728035,-1054.728035);
+            //     ctx.beginPath();
+            //     ctx.moveTo(1632.07763,772.077631);
+            //     ctx.lineTo(2197.3784379999997,772.077631);
+            //     ctx.quadraticCurveTo(2197.3784379999997,772.077631,2197.3784379999997,772.077631);
+            //     ctx.lineTo(2197.3784379999997,1337.378439);
+            //     ctx.quadraticCurveTo(2197.3784379999997,1337.378439,2197.3784379999997,1337.378439);
+            //     ctx.lineTo(1632.07763,1337.378439);
+            //     ctx.quadraticCurveTo(1632.07763,1337.378439,1632.07763,1337.378439);
+            //     ctx.lineTo(1632.07763,772.077631);
+            //     ctx.quadraticCurveTo(1632.07763,772.077631,1632.07763,772.077631);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.save();
+            //     ctx.fillStyle = "#ff415a";
+            //     ctx.translate(1914.481205,1055.481205);
+            //     ctx.translate(0,0);
+            //     ctx.rotate(-5.497787143782138);
+            //     ctx.translate(0,0);
+            //     ctx.translate(-1914.481205,-1055.481205);
+            //     ctx.beginPath();
+            //     ctx.moveTo(1764.94141,905.941411);
+            //     ctx.lineTo(2064.020998,905.941411);
+            //     ctx.quadraticCurveTo(2064.020998,905.941411,2064.020998,905.941411);
+            //     ctx.lineTo(2064.020998,1205.020999);
+            //     ctx.quadraticCurveTo(2064.020998,1205.020999,2064.020998,1205.020999);
+            //     ctx.lineTo(1764.94141,1205.020999);
+            //     ctx.quadraticCurveTo(1764.94141,1205.020999,1764.94141,1205.020999);
+            //     ctx.lineTo(1764.94141,905.941411);
+            //     ctx.quadraticCurveTo(1764.94141,905.941411,1764.94141,905.941411);
+            //     ctx.closePath();
+            //     ctx.fill();
+            //     ctx.stroke();
+            //     ctx.restore();
+            //     ctx.restore();
+            //     ctx.restore();
+            //     ctx.restore();
+            // }
         
             // Runs each time the DOM window resize event fires.
             // Resets the canvas dimensions to match window,
             // then draws the new borders accordingly.
-            function resizeCanvas() {
-                htmlCanvas.width = window.innerWidth;
-                htmlCanvas.height = window.innerHeight - 5;
-                redraw();
-            }
+            // function resizeCanvas() {
+            //     htmlCanvas.width = window.innerWidth;
+            //     htmlCanvas.height = window.innerHeight - 5;
+            //     redraw();
+            // }
 
             function resizeContainer() {
                 // if (window.innerHeight > 500) {
