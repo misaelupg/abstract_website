@@ -53,6 +53,7 @@ img.arrow {
       margin-left: 1em;
     }
 
+
 /*========== Header ==========*/
 
 header {
@@ -139,16 +140,16 @@ header {
 /****************************************************************************/
 
 .star-project:first-child {
-  background-color: $yellow;
+  // background-color: $yellow;
 }
 
 .star-project:nth-child(2) {
-  background-color: #503cfe;
+  // background-color: #503cfe;
 }
 
 .star-project:nth-child(3) {
-  background-color: $red;
-  height: 300px;
+  // background-color: $red;
+  // height: 300px;
   img.arrow {
     color: $grey;
   }
@@ -232,12 +233,13 @@ header {
 /*========== Animated Background ==========*/
 
 #animated-background {
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 0;
   left: 0;
   z-index: -1;
   background-color: $blue;
   min-height: 247px;
+  width: 100%
 }
 
 /*========== Text ==========*/

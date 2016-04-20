@@ -149,17 +149,8 @@ header {
 /****************************************************************************/
 /* Color */
 /****************************************************************************/
-.star-project:first-child {
-  background-color: #ffc614; }
-
-.star-project:nth-child(2) {
-  background-color: #503cfe; }
-
-.star-project:nth-child(3) {
-  background-color: #ff415a;
-  height: 300px; }
-  .star-project:nth-child(3) img.arrow {
-    color: #fbfcff; }
+.star-project:nth-child(3) img.arrow {
+  color: #fbfcff; }
 
 /****************************************************************************/
 /* TYPOGRAPHY */
@@ -224,12 +215,13 @@ header {
 /****************************************************************************/
 /*========== Animated Background ==========*/
 #animated-background {
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 0;
   left: 0;
   z-index: -1;
   background-color: #1e48f0;
-  min-height: 247px; }
+  min-height: 247px;
+  width: 100%; }
 
 /*========== Text ==========*/
 .animation-container h1 {
