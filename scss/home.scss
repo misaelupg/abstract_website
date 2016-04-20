@@ -91,7 +91,7 @@ header {
     @include sexy-text();
     @include styled-text($black-lighter);
     top: 20px;
-    right: -40px;
+    right: -30px;
     &::after {
         background: $black-lighter;
         content: ''; 
