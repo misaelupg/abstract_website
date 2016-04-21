@@ -184,7 +184,8 @@ header {
   left: 50%;
   top: 50%;
   border: 95px solid #ffd143;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  transform: scale(0, 0); }
 
 /*========== Journal Landing ==========*/
 #journal-section {

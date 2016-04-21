@@ -188,6 +188,7 @@ header {
 .circle-focus {
   @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
   transform: translate(-50%, -50%);
+  transform: scale(0,0);
 }
 
 /*========== Journal Landing ==========*/
