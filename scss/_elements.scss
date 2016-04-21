@@ -6,13 +6,13 @@
     background-color: $bg-color;
 }
 
-@mixin make-circle($radius, $color, $left, $bottom) {
+@mixin make-stroke-circle($radius, $color, $left, $top, $blending, $border-thickness ) {
     width: $radius;
     height: $radius;
     border-radius: 100%;
-    mix-blend-mode: multiply;
+    mix-blend-mode: $blending;
     position: absolute;
     left: $left;
-    bottom: $bottom;
-    border: 100px solid $color;
+    top: $top;
+    border: $border-thickness solid $color;
 }

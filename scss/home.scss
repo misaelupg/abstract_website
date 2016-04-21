@@ -28,113 +28,15 @@ ul {
 body {
   position: relative;
   background-color: $blue; //just temporary
-}
-
-
-/****************************************************************************/
-/* Layout */
-/****************************************************************************/
-
-/*========== General ==========*/
-
-.container {
-  padding: 0 7% 0 7%;
-  // min-height: 247px;
-  position: relative;
-}
-
-#journal-section, header {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-img.arrow {
-      max-width: 20px;
-      display: inline-block;
-      margin-left: 1em;
-    }
-
-
-/*========== Header ==========*/
-
-header {
-  @include sexy-text();
-  padding-top: 20px;
-  justify-content: space-between;
-  img.logo {
-    max-height: 20px;
-    order: -2;
-    flex-basis: auto;
-    margin-bottom: 10px;
+  &.color-transition {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition:1s;
+    transition: 1s;
+    background-color: $yellow;
   }
-  a{
-    @include nav-item(0, 900);
-    order: -1;
-  }
-}
-
-/*========== Journal Landing ==========*/
-
-#journal-section {
-  position: relative;
-  .card {
-    position: relative;
-    @include card(400px, 100%, $grey);
-    align-self: center;
-    padding: 2em;
-  }
-  .circle {
-    @include make-circle(400px, $yellow, -160px, -100px);
-  }
-
-  .styled-text {
-    @include sexy-text();
-    @include styled-text($black-lighter);
-    top: 20px;
-    right: -30px;
-    &::after {
-        background: $black-lighter;
-        content: ''; 
-        height: 2px;
-        left: 0px;
-        position: absolute;
-        top: -10px;
-        width: 15px;
-      }
-  } 
-}
-
-
-
-
-/*========== Star Project 1 ==========*/
-
-.star-project {
-  @include sexy-text();
-  padding-top: 80px;
-  img.device {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    display: block;
-    // margin-bottom: 1em;
-  }
-  .copy {
-    position: absolute;
-    bottom: 30px;
-    padding-right: 7%;
-    h1 {
-      display: inline-block;
-      margin: 0;
-      color: $grey;
-    }
-    p {
-      color: $grey;
-    }
-  }
-
-}
-
+} 
 
 /****************************************************************************/
 /* Color */
@@ -185,6 +87,20 @@ header {
   }
 }
 
+.styled-text {
+    @include sexy-text();
+    @include styled-text();
+    &::after {
+        background: $black-lighter;
+        content: ''; 
+        height: 2px;
+        left: 0px;
+        position: absolute;
+        top: -10px;
+        width: 15px;
+      }
+  } 
+
 /****************************************************************************/
 /* NAVIGATION */
 /****************************************************************************/
@@ -223,6 +139,132 @@ header {
         width: 30px;
       }
     }
+  }
+}
+
+/****************************************************************************/
+/* Layout */
+/****************************************************************************/
+
+/*========== General ==========*/
+
+.container {
+  padding: 0 7% 0 7%;
+  // min-height: 247px;
+  position: relative;
+}
+
+#journal-section, header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+img.arrow {
+      max-width: 20px;
+      display: inline-block;
+      margin-left: 1em;
+    }
+
+
+/*========== Header ==========*/
+
+header {
+  @include sexy-text();
+  padding-top: 20px;
+  justify-content: space-between;
+  img.logo {
+    max-height: 20px;
+    order: -2;
+    flex-basis: auto;
+    margin-bottom: 10px;
+  }
+  a{
+    @include nav-item(0, 900);
+    order: -1;
+  }
+}
+
+/*========== Star Projects ==========*/
+.circle-focus {
+  @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
+  transform: translate(-50%, -50%);
+}
+
+/*========== Journal Landing ==========*/
+
+#journal-section {
+  position: relative;
+  .card {
+    position: relative;
+    @include card(400px, 100%, $grey);
+    align-self: center;
+    padding: 2em;
+  }
+  .circle {
+    @include make-stroke-circle(400px, $yellow, -160px, 100px, multiply, 100px);
+  }
+  
+  .styled-text {
+    top: 20px;
+    right: -30px;
+    color: $black-lighter;
+    &:after {
+      background-color: $black-lighter;
+    }
+  }
+  // .styled-text {
+  //   @include sexy-text();
+  //   @include styled-text($black-lighter);
+  //   top: 20px;
+  //   right: -30px;
+  //   &::after {
+  //       background: $black-lighter;
+  //       content: ''; 
+  //       height: 2px;
+  //       left: 0px;
+  //       position: absolute;
+  //       top: -10px;
+  //       width: 15px;
+  //     }
+  // } 
+}
+
+
+
+
+/*========== Star Project 1 ==========*/
+
+.star-project {
+  @include sexy-text();
+  padding-top: 80px;
+  img.device {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: block;
+    // margin-bottom: 1em;
+  }
+  .copy {
+    position: absolute;
+    bottom: 30px;
+    padding-right: 7%;
+    h1 {
+      display: inline-block;
+      margin: 0;
+      color: $grey;
+    }
+    p {
+      color: $grey;
+    }
+  }
+
+  .styled-text {
+    color: $grey;
+    right: 5%;
+    &::after {
+        background: $grey;
+    } 
+  
   }
 }
 

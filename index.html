@@ -16,7 +16,7 @@
 
 </head>
 <body class="home">
-
+<div class="circle-focus"></div>
 <div id="fullpage">
     <!-- ==========================================================================
     Cover
@@ -52,6 +52,7 @@
     ========================================================================== -->
     <!-- Project 1 -->
     <section class="star-project container section">
+        <h2 class="styled-text">LABS</h2>
         <img class="device" src="./svg/apple_watch_white.svg" alt="">
         <div class="copy">
             <a href=""><h1>news</h1></a>
@@ -60,6 +61,7 @@
     </section><!-- project -->
     <!-- Project 2 -->
     <section class="star-project container section">
+        <h2 class="styled-text">LABS</h2>
         <img class="device" src="./svg/apple_iphone_white.svg" alt="">
         <div class="copy">
             <a href=""><h1>news</h1></a>
@@ -68,6 +70,7 @@
     </section><!-- project -->
     <!-- Project 3 -->
     <section class="star-project container section">
+        <h2 class="styled-text">LABS</h2>
         <img class="device" src="./svg/apple_watch_white.svg" alt="">
         <div class="copy">
             <a href=""><h1>news</h1></a>
@@ -112,32 +115,59 @@
 </div>
     <script>
         $(document).ready(function() {
+
+            //Fullpage Pluging Initialization
             $('#fullpage').fullpage({
                 verticalCentered: false,
                 easingcss3: 'cubic-bezier(0.55,0,0.1,1)',
-                normalScrollElements: '.main-nav, .landing'
+                normalScrollElements: '.main-nav, .landing',
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+                    var $body = $('body');
+
+                    //after leaving section 2
+                    if(index == 1 && direction =='down') {
+                        console.log('to section 2');
+                        $body.addClass('color-transition');
+                        
+                    }
+
+                    else if(index == 2 && direction == 'up'){
+                        console.log("Going to section 1!");
+                        $body.addClass('color-transition');
+                    }
+                }
 
             });
+
+            var bgColors = ['#ffc614', '#503cfe', '#ff415a'];
+            function changeBgColor(bgColors, index) {
+                console.log('Color');
+            }
+
+
+            // Resizing Containers
+            initialize();
+             
+            function initialize() {
+                // Register an event listener to
+                // call the resizeContainer() function each time 
+                // the window is resized.
+                window.addEventListener('resize', resizeContainer, false);
+                
+                //resize for the first time
+                resizeContainer();
+            }
+
+            function resizeContainer() {
+                // if (window.innerHeight > 500) {
+                    $('.container').css({'height': window.innerHeight - 5 + 'px'});
+                // }
+                
+            }
         });
 
-        initialize();
-         
-        function initialize() {
-            // Register an event listener to
-            // call the resizeContainer() function each time 
-            // the window is resized.
-            window.addEventListener('resize', resizeContainer, false);
-            
-            //resize for the first time
-            resizeContainer();
-        }
-
-        function resizeContainer() {
-            // if (window.innerHeight > 500) {
-                $('.container').css({'height': window.innerHeight - 5 + 'px'});
-            // }
-            
-        }
+        
 
         
 

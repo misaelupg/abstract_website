@@ -28,10 +28,9 @@
     line-height: $line-height-small;
 }
 
-@mixin styled-text($color) {
-    $color: $color;
+@mixin styled-text() {
     letter-spacing: 7px;
-    font-size: 0.5em;
+    font-size: 0.6em;
     font-weight: 900;
     transform: rotate(0.25turn);
     position: absolute;
