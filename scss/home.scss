@@ -29,11 +29,11 @@ body {
   position: relative;
   background-color: $blue; //just temporary
   &.color-transition {
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition:1s;
-    transition: 1s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition:.7s;
+    transition: .7s;
     background-color: $yellow;
   }
 } 
@@ -187,8 +187,13 @@ header {
 /*========== Star Projects ==========*/
 .circle-focus {
   @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
-  transform: translate(-50%, -50%);
-  transform: scale(0,0);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0,0);
+  transition: transform 0.6s cubic-bezier(.87,-.41,.19,1.44);
+  &.circle-animation-scaled {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1,1);
+  }
 }
 
 /*========== Journal Landing ==========*/
@@ -306,6 +311,8 @@ header {
     color: $grey;
   }
 }
+
+
 
 
 /****************************************************************************/

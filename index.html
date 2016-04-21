@@ -124,11 +124,13 @@
                 onLeave: function(index, nextIndex, direction){
                     var leavingSection = $(this);
                     var $body = $('body');
+                    var $circleFocus = $('.circle-focus');
 
                     //after leaving section 2
                     if(index == 1 && direction =='down') {
                         console.log('to section 2');
                         $body.addClass('color-transition');
+                        $circleFocus.addClass('circle-animation-scaled');
                         
                     }
 
