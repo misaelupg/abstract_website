@@ -184,14 +184,13 @@ header {
 }
 
 /*========== Star Projects ==========*/
-.circle-focus {
+#circle-focus {
   @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0,0);
-  transition: transform 0.6s cubic-bezier(.87,-.41,.19,1.44);
-  &.circle-animation-scaled {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1,1);
+  // opacity: 0;
+  transform: translate(-50%, -50%) scale(1,1);
+  transition: all 0.6s cubic-bezier(.87,-.41,.19,1.44);
+  &.circle-animation-scaled {      
+  animation: scaleCircle 0.7s cubic-bezier(.87,-.41,.19,1.44) 0s 1 forwards;
   }
 }
 
@@ -280,15 +279,17 @@ header {
 
 /*========== Animated Background ==========*/
 
-// #animated-background {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: -1;
-//   background-color: $blue;
-//   min-height: 247px;
-//   width: 100%
-// }
+@keyframes scaleCircle{
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0,0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1,1);
+  }
+}
 
 /*========== Text ==========*/
 

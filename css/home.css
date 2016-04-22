@@ -174,7 +174,7 @@ header {
     order: -1; }
 
 /*========== Star Projects ==========*/
-.circle-focus {
+#circle-focus {
   width: 500px;
   height: 500px;
   border-radius: 100%;
@@ -183,12 +183,10 @@ header {
   left: 50%;
   top: 50%;
   border: 95px solid #ffd143;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0, 0);
-  transition: transform 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44); }
-  .circle-focus.circle-animation-scaled {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1, 1); }
+  transform: translate(-50%, -50%) scale(1, 1);
+  transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44); }
+  #circle-focus.circle-animation-scaled {
+    animation: scaleCircle 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s 1 forwards; }
 
 /*========== Journal Landing ==========*/
 #journal-section {
@@ -248,6 +246,13 @@ header {
 /* ANIMATIONS */
 /****************************************************************************/
 /*========== Animated Background ==========*/
+@keyframes scaleCircle {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0, 0); }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1); } }
 /*========== Text ==========*/
 .cover-text h1 {
   font-size: 2.5em;

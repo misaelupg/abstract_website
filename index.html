@@ -16,7 +16,7 @@
 
 </head>
 <body class="home color-transition">
-<div class="circle-focus"></div>
+<div id="circle-focus"></div>
 <div id="fullpage">
     <!-- ==========================================================================
     Cover
@@ -115,7 +115,9 @@
 </div>
     <script>
         $(document).ready(function() {
-
+            var $body = $('body');
+            var $circleFocus = $('#circle-focus');
+            $circleFocus.hide();
             //Fullpage Pluging Initialization
             $('#fullpage').fullpage({
                 verticalCentered: false,
@@ -123,8 +125,6 @@
                 normalScrollElements: '.main-nav, .landing',
                 onLeave: function(index, nextIndex, direction){
                     var leavingSection = $(this);
-                    var $body = $('body');
-                    var $circleFocus = $('.circle-focus');
                     console.log(index);
                     console.log(nextIndex);
                     console.log(direction);
@@ -132,28 +132,48 @@
                         {
                             sectionIndex: 1,
                             backgroundColor: '#1e48f0',
+                            borderColor: '#4768f1'
                         },
                         {
                             sectionIndex: 2,
                             backgroundColor: '#ffc614',
+                            borderColor: '#ffd143'
                         },
                         {
                             sectionIndex: 3,
                             backgroundColor: '#503cfe',
+                            borderColor: '#4768f1'
                         },
                         {
                             sectionIndex: 4,
                             backgroundColor: '#ff415a',
+                            borderColor: '#ff6c80'
+                        }, 
+                        {
+                            sectionIndex: 5,
+                            backgroundColor: '#fbfcff',
                         }
                     ];
 
+                    $circleFocus.show();
+                    var cleanAnimation = function() {
+                        $circleFocus.removeClass('circle-animation-scaled');
+                    };
+                    var animateCircle = function() {
+                        $body.css({'background-color': sections[section].backgroundColor});
+                        $circleFocus.addClass('circle-animation-scaled');
+                        $circleFocus.css({
+                            'border-color': sections[section].borderColor
+                        });
+                    };
+                    $circleFocus[0].addEventListener('animationend', cleanAnimation, false);
                     for (var section in sections) {
-                        if (nextIndex === sections[section].sectionIndex && direction === 'down' ) {
-                            $body.css({'background-color': sections[section].backgroundColor});
-                            $circleFocus.addClass('circle-animation-scaled');
-                            console.log(sections[section].backgroundColor);
-                            console.log(index);
-                            console.log(nextIndex);
+
+                        if (nextIndex === sections[section].sectionIndex) {
+                            
+                            animateCircle();
+                            if (nextIndex === 1 || nextIndex === 5) { $circleFocus.hide(); }
+                            
                         } 
                     }
                     //
@@ -204,9 +224,10 @@
                 // call the resizeContainer() function each time 
                 // the window is resized.
                 window.addEventListener('resize', resizeContainer, false);
-                
+
                 //resize for the first time
                 resizeContainer();
+
             }
 
             function resizeContainer() {
