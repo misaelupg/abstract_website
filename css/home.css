@@ -50,8 +50,7 @@ body {
     -moz-transition: .7s;
     -ms-transition: .7s;
     -o-transition: .7s;
-    transition: .7s;
-    background-color: #ffc614; }
+    transition: .7s; }
 
 /****************************************************************************/
 /* Color */

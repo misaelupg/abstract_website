@@ -15,7 +15,7 @@
 
 
 </head>
-<body class="home">
+<body class="home color-transition">
 <div class="circle-focus"></div>
 <div id="fullpage">
     <!-- ==========================================================================
@@ -125,27 +125,75 @@
                     var leavingSection = $(this);
                     var $body = $('body');
                     var $circleFocus = $('.circle-focus');
+                    console.log(index);
+                    console.log(nextIndex);
+                    console.log(direction);
+                    var sections = [
+                        {
+                            sectionIndex: 1,
+                            backgroundColor: '#1e48f0',
+                        },
+                        {
+                            sectionIndex: 2,
+                            backgroundColor: '#ffc614',
+                        },
+                        {
+                            sectionIndex: 3,
+                            backgroundColor: '#503cfe',
+                        },
+                        {
+                            sectionIndex: 4,
+                            backgroundColor: '#ff415a',
+                        }
+                    ];
 
-                    //after leaving section 2
-                    if(index == 1 && direction =='down') {
-                        console.log('to section 2');
-                        $body.addClass('color-transition');
-                        $circleFocus.addClass('circle-animation-scaled');
+                    for (var section in sections) {
+                        if (nextIndex === sections[section].sectionIndex && direction === 'down' ) {
+                            $body.css({'background-color': sections[section].backgroundColor});
+                            $circleFocus.addClass('circle-animation-scaled');
+                            console.log(sections[section].backgroundColor);
+                            console.log(index);
+                            console.log(nextIndex);
+                        } 
+                    }
+                    //
+                    //Make object with properties of each index, and then loop selecting object with index propert passed through function
+                    //
+                    
+                    //after leaving section 1
+                    // if(index == 1 && direction =='down') {
+                    //     console.log('to section 2');
+                    //     $('body.color-transition').css('background-color', '#ffc614');
+                    //     $body.addClass('color-transition');
+                    //     $circleFocus.addClass('circle-animation-scaled');
                         
-                    }
+                    // }
 
-                    else if(index == 2 && direction == 'up'){
-                        console.log("Going to section 1!");
-                        $body.addClass('color-transition');
-                    }
+                    // else if(index == 2 && direction == 'up'){
+                    //     console.log("Going to section 1!");
+                    //     // $body.removeClass('color-transition');
+                    //     $('body.color-transition').css('background-color', '#1e48f0');
+                    // }
+
+                    //  //after leaving section 2
+                    // if(index == 2 && direction =='down') {
+                    //     console.log('to section 2');
+                    //     $body.addClass('color-transition');
+                        
+                    // }
+
+                    // else if(index == 3 && direction == 'up'){
+                    //     console.log("Going to section 1!");
+                    //     $body.addClass('color-transition');
+                    // }
                 }
 
             });
 
-            var bgColors = ['#ffc614', '#503cfe', '#ff415a'];
-            function changeBgColor(bgColors, index) {
-                console.log('Color');
-            }
+            // var bgColors = ['#ffc614', '#503cfe', '#ff415a'];
+            // function changeBgColor(bgColors, index) {
+            //     console.log('Color');
+            // }
 
 
             // Resizing Containers
