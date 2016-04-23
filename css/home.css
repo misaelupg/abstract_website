@@ -25,16 +25,25 @@
   font-style: normal;
   font-weight: 900;
   src: url("../fonts/PostGrotesk-Bold.eot"), url("../fonts/PostGrotesk-Bold.woff2") format("woff2"), url("../fonts/PostGrotesk-Bold.woff") format("woff"), url("../fonts/PostGrotesk-Bold.ttf") format("truetype"), url("../fonts/PostGrotesk-Bold.svg#Lora-Bold") format("svg"), url("../fonts/PostGrotesk-Bold.eot?#iefix") format("embedded-opentype"); }
+@font-face {
+  font-family: 'PostGrotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PostGrotesk-Book.eot"), url("../fonts/PostGrotesk-Book.woff2") format("woff2"), url("../fonts/PostGrotesk-Book.woff") format("woff"), url("../fonts/PostGrotesk-Book.ttf") format("truetype"), url("../fonts/PostGrotesk-Book.svg#Lora-Book") format("svg"), url("../fonts/PostGrotesk-Book.eot?#iefix") format("embedded-opentype"); }
 /*========== Font Sizes ==========*/
 /****************************************************************************/
 /* Delete Default Styles */
 /****************************************************************************/
 /*========== Common Fixes ==========*/
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "PostGrotesk", serif; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
 
 /*========== List ==========*/
 ul {
@@ -66,18 +75,18 @@ body, .get-in-touch {
 /*========== General ==========*/
 .home h1 {
   font-size: 3em;
-  font-weight: 900;
-  font-family: "PostGrotesk", serif;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  font-weight: 900; }
 .home p {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   font-family: "Lora-Regular", serif;
   letter-spacing: 1px;
   font-size: 0.8em;
   margin: 0.3em 0;
   line-height: 1.5em; }
+.home h1, .home h2, .home p {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+.home h2 {
+  font-weight: 600; }
 
 #journal-section h1 {
   font-size: 2.5em; }
@@ -91,8 +100,7 @@ body, .get-in-touch {
   font-size: 0.6em;
   font-weight: 900;
   transform: rotate(0.25turn);
-  position: absolute;
-  font-family: "PostGrotesk", serif; }
+  position: absolute; }
   .styled-text:after {
     background: #212121;
     content: '';
@@ -120,7 +128,6 @@ body, .get-in-touch {
       padding: 10px 12px 20px 0; }
     .main-nav ul li.nav-item, .main-nav ul a {
       color: #fbfcff;
-      font-family: "PostGrotesk", serif;
       font-size: 0.9em;
       font-weight: 600;
       letter-spacing: 6px;
@@ -144,7 +151,7 @@ body, .get-in-touch {
   padding: 0 7% 0 7%;
   position: relative; }
 
-#journal-section, header {
+#journal-section, header, .get-in-touch {
   display: flex;
   flex-flow: row wrap; }
 
@@ -166,7 +173,6 @@ img.arrow {
     margin-bottom: 10px; }
   .header a {
     color: #fbfcff;
-    font-family: "PostGrotesk", serif;
     font-size: 0.9em;
     font-weight: 900;
     letter-spacing: 0;
@@ -262,7 +268,6 @@ img.arrow {
 /*========== Text ==========*/
 .cover-text h1 {
   font-size: 2.5em;
-  font-family: "PostGrotesk", serif;
   font-weight: 900;
   margin-top: 20%; }
 .cover-text p {
@@ -272,6 +277,65 @@ img.arrow {
   line-height: 1.9em; }
 .cover-text h1, .cover-text p {
   color: #fbfcff; }
+
+/****************************************************************************/
+/* Get In Touch */
+/****************************************************************************/
+/*========== Touch ==========*/
+.get-in-touch {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  justify-content: space-around;
+  color: #fbfcff;
+  text-align: center; }
+  .get-in-touch li {
+    display: inline-block; }
+  .get-in-touch .touch {
+    align-self: flex-end;
+    padding-bottom: 30%; }
+    .get-in-touch .touch a {
+      font-weight: 400;
+      padding: 7px 0;
+      color: #fbfcff;
+      border-bottom: 2px solid #fbfcff;
+      font-size: 0.7em; }
+      .get-in-touch .touch a:hover {
+        color: #fff; }
+      .get-in-touch .touch a:active {
+        color: #fff; }
+      .get-in-touch .touch a:visited {
+        color: #fff; }
+    .get-in-touch .touch h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      padding: 0 5%; }
+  .get-in-touch footer {
+    box-sizing: content-box;
+    opacity: .7;
+    display: inherit;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .get-in-touch footer .contact-info {
+      text-align: right; }
+      .get-in-touch footer .contact-info li {
+        display: block;
+        font-weight: 400; }
+        .get-in-touch footer .contact-info li:nth-child(1) {
+          margin-bottom: 5px; }
+
+/*========== Footer ==========*/
+.social, .contact-info {
+  border-top: 1px solid #fbfcff;
+  padding-top: 15px;
+  margin-bottom: 15px; }
+  .social .social-circle, .contact-info .social-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #fbfcff;
+    margin: 3px; }
 
 /****************************************************************************/
 /* Media Queries */

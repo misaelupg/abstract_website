@@ -81,6 +81,18 @@ $black-lighter: #212121;
   url('../fonts/PostGrotesk-Bold.eot?#iefix') format('embedded-opentype');
 }
 
+@font-face {
+  font-family: 'PostGrotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PostGrotesk-Book.eot'), 
+  url('../fonts/PostGrotesk-Book.woff2') format('woff2'),
+  url('../fonts/PostGrotesk-Book.woff') format('woff'),
+  url('../fonts/PostGrotesk-Book.ttf') format('truetype'),
+  url('../fonts/PostGrotesk-Book.svg#Lora-Book') format('svg'),
+  url('../fonts/PostGrotesk-Book.eot?#iefix') format('embedded-opentype');
+}
+
 
 $lora: 'Lora-Regular', serif;
 $lora-italic: 'Lora-Italic', serif;

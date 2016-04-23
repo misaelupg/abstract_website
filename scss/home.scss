@@ -10,9 +10,14 @@
 /*========== Common Fixes ==========*/
 html {
   box-sizing: border-box;
+  font-family: $post-grotesk;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -69,13 +74,18 @@ body, .get-in-touch {
 
 .home {
   h1 {
-    @include big-short-headline();
-    @include sexy-text();
+    @include big-short-headline(1);
   }
 
   p {
-    @include sexy-text();
     @include lora-paragraph();
+  }
+
+  h1, h2, p {
+    @include sexy-text();
+  }
+  h2 {
+    font-weight: 600;
   }
 }
 
@@ -156,7 +166,7 @@ body, .get-in-touch {
   position: relative;
 }
 
-#journal-section, header {
+#journal-section, header, .get-in-touch {
   display: flex;
   flex-flow: row wrap;
 }
@@ -307,7 +317,6 @@ img.arrow {
 .cover-text {
  h1 {
     font-size: 2.5em;
-    font-family: $post-grotesk;
     font-weight: 900;
     margin-top: 20%;
   }
@@ -323,8 +332,69 @@ img.arrow {
   }
 }
 
+/****************************************************************************/
+/* Get In Touch */
+/****************************************************************************/
+/*========== Touch ==========*/
+
+.get-in-touch {
+  @include sexy-text();
+  justify-content: space-around;
+  color: $grey;
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+  .touch {
+    align-self: flex-end;
+    padding-bottom: 30%;
+    a {
+      @include link($grey);
+      font-size: 0.7em;
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      padding: 0 5%;
+    }
+  }
+  
+  footer {
+    box-sizing: content-box;
+    opacity: .7;
+    display: inherit;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    .contact-info {
+      text-align: right;
+      li {
+        display: block;
+        font-weight: 400;
+        &:nth-child(1) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+/*========== Footer ==========*/
 
 
+.social, .contact-info {
+  border-top: 1px solid $grey;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  .social-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: $grey;
+    margin: 3px;
+  }
+}
 
 /****************************************************************************/
 /* Media Queries */

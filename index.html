@@ -5,7 +5,7 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#0011F7">
-<title>ABSTRACT | Agencia Digital | Software, Diseño, Marketing, Innovación Tecnológica, Data</title>
+<title>ABSTRACT | Digital Agency | Software, Design, Marketing, Innovation Tech, Data</title>
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
 <link rel="stylesheet" type="text/css" href="./css/home.css">
@@ -21,34 +21,30 @@
 <body class="home color-transition" id="scene-1">
 <div id="circle-focus" ></div>
 
-<!-- ==========================================================================
-Cover
-========================================================================== -->
-<!-- Header -->
-<div class="container section">
+<div id="fullpage">
+    <!-- ==========================================================================
+    Cover
+    ========================================================================== -->
+    <!-- Header -->
+    <div class="container section" data-anchor="coverSection">
     <header class="header">
-        
-        <img class="logo" src="./img/logo_placeholder.png">
-
+        <img class="logo fixed-nav-item" src="./img/logo_placeholder.png">
         <nav class="main-nav">
             <ul>
                 <li class="nav-item active"><a href="">HOME</a></li>
-                <li class="nav-item"><a href="">PORTAFOLIO</a></li>
+                <li class="nav-item"><a href="">WORK</a></li>
                 <li class="nav-item"><a href="">LABS</a></li>
                 <li class="nav-item"><a href="">JOURNAL</a></li>
                 <li class="nav-item"><a href="">HUMAN [X]</a></li>
             </ul><!-- menu -->
         </nav><!-- nav -->
-        <a class="nav-item"href="">&#43; contactar</a>
+        <a class="nav-item fixed-nav-item" href="">&#43; contact</a>
     </header><!-- cover -->
-
-<div id="fullpage">
-
         <div class="cover-text">
             <h1>
-                Creamos experiencias digitales para humanos.
+                We craft digital experiences for humans.
             </h1>
-            <p >En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
+            <p >We design and develope mobile and web apps, help your brand to stand-out, improve your workflow and services to increase your profits.</p>
         </div><!-- animtaion container -->
     </div><!-- container -->
     
@@ -57,7 +53,7 @@ Cover
     Star Projects
     ========================================================================== -->
     <!-- Project 1 -->
-    <section class="star-project container section">
+    <section class="star-project container section" data-anchor="project1">
         <h2 class="styled-text">LABS</h2>
         <img class="device layer" data-depth="0.2" src="./svg/apple_watch_white.svg" alt="">
         <div class="copy layer" data-depth="0.4" >
@@ -66,7 +62,7 @@ Cover
         </div>
     </section><!-- project -->
     <!-- Project 2 -->
-    <section class="star-project container section">
+    <section class="star-project container section" data-anchor="project2">
         <h2 class="styled-text">LABS</h2>
         <img class="device" src="./svg/apple_bookpro13_white.svg" alt="">
         <div class="copy layer" data-depth="0.4">
@@ -75,7 +71,7 @@ Cover
         </div>
     </section><!-- project -->
     <!-- Project 3 -->
-    <section class="star-project container section">
+    <section class="star-project container section"  data-anchor="project3">
         <h2 class="styled-text">LABS</h2>
         <img class="device layer" data-depth="0.2" src="./svg/apple_iphone_white.svg" alt="">
         <div class="copy layer" data-depth="0.4">
@@ -88,7 +84,7 @@ Cover
     Landing
     ========================================================================== -->
     <!-- Journal -->
-    <section id="journal-section"  class="container section">
+    <section id="journal-section"  class="container section" data-anchor="journalSection">
         <div class="card layer" data-depth="0.30">
             <h1>How Apple is giving design a bad name.</h1>
             <h2 class="styled-text">JOURNAL</h2>
@@ -98,10 +94,10 @@ Cover
         
     </section>
     <!-- Disciplines -->
-    <section id="disciplines-section" class="container section"> 
+    <section id="disciplines-section" class="container section" data-anchor="disciplinesSection"> 
     
     </section>
-    <section id="humans-section" class="container section">
+    <section id="humans-section" class="container section" data-anchor="humansSection">
         
     </section>
     
@@ -109,16 +105,30 @@ Cover
     <!-- ==========================================================================
     Get in Touch
     ========================================================================== -->
-    <div class="get-in-touch section">
-        
+    <div class="get-in-touch section container" data-anchor="getInTouch">
+        <div class="touch">
+            <h1>Want to work with us?</h1>
+            <h2><a href="">hello@abstract.com</a></h2>
+        </div>
+        <footer id="footer">
+            <div class="social">
+                <ul>
+                    <li><a href=""><div class="social-circle"></div></a></li>
+                    <li><a href=""><div class="social-circle"></div></a></li>
+                    <li><a href=""><div class="social-circle"></div></a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <ul>
+                    <li>contact@abstract.com</li>
+                    <li>(+52) 442 2308 556</li>
+                </ul>
+            </div>
+        </footer><!-- footer -->
     </div><!-- get in touch -->
 
-    <!-- ==========================================================================
-    Footer
-    ========================================================================== -->
-    <footer>
-        
-    </footer><!-- footer -->
+    
+
 </div>
     <script>
         $(document).ready(function() {
@@ -128,7 +138,6 @@ Cover
             //Fullpage Pluging Initialization
             $('#fullpage').fullpage({
                 verticalCentered: false,
-                fixedElements: '',
                 easingcss3: 'cubic-bezier(0.55,0,0.1,1)',
                 normalScrollElements: '.main-nav',
                 onLeave: function(index, nextIndex, direction){
