@@ -27,7 +27,6 @@ ul {
 
 body {
   position: relative;
-  background-color: $blue; //just temporary
   &.color-transition {
     -webkit-transition: .7s;
     -moz-transition: .7s;
@@ -41,11 +40,15 @@ body {
 /* Color */
 /****************************************************************************/
 
+body, .get-in-touch {
+  background-color: $blue;
+}
+
 .star-project:first-child {
   // background-color: $yellow;
 }
 
-.star-project:nth-child(2) {
+.star-project:nth-of-type(2) {
   // background-color: #503cfe;
 }
 
@@ -89,7 +92,7 @@ body {
 .styled-text {
     @include sexy-text();
     @include styled-text();
-    &::after {
+    &:after {
         background: $black-lighter;
         content: ''; 
         height: 2px;
@@ -128,7 +131,7 @@ body {
       @include nav-item(6px, 600);
     }
     .active {
-      a::after {
+      a:after {
         background: $grey;
         content: ''; 
         height: 3px;
@@ -158,6 +161,7 @@ body {
   flex-flow: row wrap;
 }
 
+
 img.arrow {
       max-width: 20px;
       display: inline-block;
@@ -167,7 +171,7 @@ img.arrow {
 
 /*========== Header ==========*/
 
-header {
+.header {
   @include sexy-text();
   padding-top: 20px;
   justify-content: space-between;
@@ -186,7 +190,6 @@ header {
 /*========== Star Projects ==========*/
 #circle-focus {
   @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
-  // opacity: 0;
   transform: translate(-50%, -50%) scale(1,1);
   transition: all 0.6s cubic-bezier(.87,-.41,.19,1.44);
   &.circle-animation-scaled {      
@@ -239,14 +242,22 @@ header {
 /*========== Star Project 1 ==========*/
 
 .star-project {
-  @include sexy-text();
-  padding-top: 80px;
-  img.device {
+    @include sexy-text();
+    padding-top: 20%;
+    img.device {
     width: 70%;
     height: 70%;
     margin: 0 auto;
     display: block;
+
     // margin-bottom: 1em;
+  }
+  &:nth-of-type(2) {
+    img.device {
+    width: 220%;
+    transform: translate3d(-50%, 0,0);
+    padding-bottom: 20px;
+    }
   }
   .copy {
     position: absolute;
@@ -265,11 +276,11 @@ header {
   .styled-text {
     color: $grey;
     right: 5%;
-    &::after {
+    &:after {
         background: $grey;
     } 
   
-  }
+  } 
 }
 
 
@@ -282,12 +293,12 @@ header {
 @keyframes scaleCircle{
   from {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0,0);
+    transform: translate3d(-50%, -50%, 0) scale(0,0);
   }
 
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1,1);
+    transform: translate3d(-50%, -50%, 0) scale(1,1);
   }
 }
 

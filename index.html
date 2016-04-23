@@ -4,40 +4,46 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#1e48f0">
+<meta name="theme-color" content="#0011F7">
 <title>ABSTRACT | Agencia Digital | Software, Diseño, Marketing, Innovación Tecnológica, Data</title>
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
 <link rel="stylesheet" type="text/css" href="./css/home.css">
 <link rel="stylesheet" type="text/css" href="./bower_components/fullpage.js/dist/jquery.fullPage.css" />
+
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
 
 
-</head>
-<body class="home color-transition">
-<div id="circle-focus"></div>
-<div id="fullpage">
-    <!-- ==========================================================================
-    Cover
-    ========================================================================== -->
-    <!-- Header -->
-    <div class="container section">
-        <header class="header">
-            
-            <img class="logo" src="./img/logo_placeholder.png">
 
-            <nav class="main-nav">
-                <ul>
-                    <li class="nav-item active"><a href="">HOME</a></li>
-                    <li class="nav-item"><a href="">PORTAFOLIO</a></li>
-                    <li class="nav-item"><a href="">LABS</a></li>
-                    <li class="nav-item"><a href="">JOURNAL</a></li>
-                    <li class="nav-item"><a href="">HUMAN [X]</a></li>
-                </ul><!-- menu -->
-            </nav><!-- nav -->
-            <a class="nav-item"href="">&#43; contactar</a>
-        </header><!-- cover -->
+
+</head>
+<body class="home color-transition" id="scene-1">
+<div id="circle-focus" ></div>
+
+<!-- ==========================================================================
+Cover
+========================================================================== -->
+<!-- Header -->
+<div class="container section">
+    <header class="header">
+        
+        <img class="logo" src="./img/logo_placeholder.png">
+
+        <nav class="main-nav">
+            <ul>
+                <li class="nav-item active"><a href="">HOME</a></li>
+                <li class="nav-item"><a href="">PORTAFOLIO</a></li>
+                <li class="nav-item"><a href="">LABS</a></li>
+                <li class="nav-item"><a href="">JOURNAL</a></li>
+                <li class="nav-item"><a href="">HUMAN [X]</a></li>
+            </ul><!-- menu -->
+        </nav><!-- nav -->
+        <a class="nav-item"href="">&#43; contactar</a>
+    </header><!-- cover -->
+
+<div id="fullpage">
+
         <div class="cover-text">
             <h1>
                 Creamos experiencias digitales para humanos.
@@ -45,7 +51,7 @@
             <p >En ABSTRACT diseñamos y desarollamos aplicaciones móviles y web, ayudamos a que tu marca sobresalga, y mejoramos tus servicios y flujo de trabajo</p>
         </div><!-- animtaion container -->
     </div><!-- container -->
-    <!-- <canvas id="animated-background"></canvas> -->
+    
 
     <!-- ==========================================================================
     Star Projects
@@ -53,8 +59,8 @@
     <!-- Project 1 -->
     <section class="star-project container section">
         <h2 class="styled-text">LABS</h2>
-        <img class="device" src="./svg/apple_watch_white.svg" alt="">
-        <div class="copy">
+        <img class="device layer" data-depth="0.2" src="./svg/apple_watch_white.svg" alt="">
+        <div class="copy layer" data-depth="0.4" >
             <a href=""><h1>news</h1></a>
             <p>This is just a very small description about this little project.<img  class="arrow" src="./svg/arrow.svg" alt=""></p>
         </div>
@@ -62,17 +68,17 @@
     <!-- Project 2 -->
     <section class="star-project container section">
         <h2 class="styled-text">LABS</h2>
-        <img class="device" src="./svg/apple_iphone_white.svg" alt="">
-        <div class="copy">
-            <a href=""><h1>news</h1></a>
+        <img class="device" src="./svg/apple_bookpro13_white.svg" alt="">
+        <div class="copy layer" data-depth="0.4">
+            <a href=""><h1>pro-file</h1></a>
             <p>This is just a very small description about this little project.<img  class="arrow" src="./svg/arrow.svg" alt=""></p>
         </div>
     </section><!-- project -->
     <!-- Project 3 -->
     <section class="star-project container section">
         <h2 class="styled-text">LABS</h2>
-        <img class="device" src="./svg/apple_watch_white.svg" alt="">
-        <div class="copy">
+        <img class="device layer" data-depth="0.2" src="./svg/apple_iphone_white.svg" alt="">
+        <div class="copy layer" data-depth="0.4">
             <a href=""><h1>news</h1></a>
             <p>This is just a very small description about this little project.<img  class="arrow" src="./svg/arrow_white.svg" alt=""></p>
         </div>
@@ -81,28 +87,29 @@
     <!-- ==========================================================================
     Landing
     ========================================================================== -->
-    <div id="landing" class="section">
-        <section id="journal-section"  class="container">
-            <div class="card">
-                <h1>How Apple is giving design a bad name.</h1>
-                <h2 class="styled-text">JOURNAL</h2>
-                <p>Facts why inkjet printing is very appealing compared to rodinary printing. Ok, so this just isn't enough, here comes mora dummy text to fill more space.<img  class="arrow" src="./svg/arrow.svg" alt=""></p>
-                <div class="circle"></div>
-            </div>
-            
-        </section>
-        <section id="disciplines-section" class="container"> 
-            
-        </section>
-        <section id="humans-section" class="container">
-            
-        </section>
-    </div><!-- landing -->
+    <!-- Journal -->
+    <section id="journal-section"  class="container section">
+        <div class="card layer" data-depth="0.30">
+            <h1>How Apple is giving design a bad name.</h1>
+            <h2 class="styled-text">JOURNAL</h2>
+            <p>Facts why inkjet printing is very appealing compared to rodinary printing. Ok, so this just isn't enough, here comes mora dummy text to fill more space.<img  class="arrow" src="./svg/arrow.svg" alt=""></p>
+            <div class="circle layer" data-depth="1" ></div>
+        </div>
+        
+    </section>
+    <!-- Disciplines -->
+    <section id="disciplines-section" class="container section"> 
+    
+    </section>
+    <section id="humans-section" class="container section">
+        
+    </section>
+    
     
     <!-- ==========================================================================
     Get in Touch
     ========================================================================== -->
-    <div class="get-in-touch">
+    <div class="get-in-touch section">
         
     </div><!-- get in touch -->
 
@@ -121,8 +128,9 @@
             //Fullpage Pluging Initialization
             $('#fullpage').fullpage({
                 verticalCentered: false,
+                fixedElements: '',
                 easingcss3: 'cubic-bezier(0.55,0,0.1,1)',
-                normalScrollElements: '.main-nav, .landing',
+                normalScrollElements: '.main-nav',
                 onLeave: function(index, nextIndex, direction){
                     var leavingSection = $(this);
                     console.log(index);
@@ -131,7 +139,7 @@
                     var sections = [
                         {
                             sectionIndex: 1,
-                            backgroundColor: '#1e48f0',
+                            backgroundColor: '#0011F7',
                             borderColor: '#4768f1'
                         },
                         {
@@ -142,15 +150,23 @@
                         {
                             sectionIndex: 3,
                             backgroundColor: '#503cfe',
-                            borderColor: '#4768f1'
+                            borderColor: '#422dfc'
                         },
                         {
                             sectionIndex: 4,
                             backgroundColor: '#ff415a',
-                            borderColor: '#ff6c80'
+                            borderColor: '#ff2b47'
                         }, 
                         {
                             sectionIndex: 5,
+                            backgroundColor: '#fbfcff',
+                        },
+                        {
+                            sectionIndex: 6,
+                            backgroundColor: '#fbfcff',
+                        },
+                        {
+                            sectionIndex: 7,
                             backgroundColor: '#fbfcff',
                         }
                     ];
@@ -172,7 +188,7 @@
                         if (nextIndex === sections[section].sectionIndex) {
                             
                             animateCircle();
-                            if (nextIndex === 1 || nextIndex === 5) { $circleFocus.hide(); }
+                            if (nextIndex === 1 || nextIndex > 4) { $circleFocus.hide(); }
                             
                         } 
                     }
@@ -242,6 +258,10 @@
 
         
 
+    </script>
+    <script src="./js/jquery.parallax.js"></script>
+    <script>
+        $('#scene-1').parallax();
     </script>
 </body>
 </html>
