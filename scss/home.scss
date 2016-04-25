@@ -215,7 +215,7 @@ img.arrow {
   position: relative;
   .card {
     position: relative;
-    @include card(450px, 100%, $grey);
+    @include card(440px, 100%, $grey);
     align-self: center;
     picture {
       mix-blend-mode: multiply;
@@ -247,10 +247,10 @@ img.arrow {
   
   .styled-text {
     top: 20px;
-    right: -30px;
+    right: -20px;
     color: $black-lighter;
     &:after {
-      background-color: $black-lighter;
+      background-color: $red-lighter;
     }
   }
 }
