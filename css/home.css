@@ -69,6 +69,11 @@ body, .get-in-touch {
 .star-project:nth-child(3) img.arrow {
   color: #fbfcff; }
 
+#disciplines-section h1 {
+  color: #ff415a;
+  align-self: center;
+  font-size: 4.5em; }
+
 /****************************************************************************/
 /* TYPOGRAPHY */
 /****************************************************************************/
@@ -164,7 +169,7 @@ body, .get-in-touch {
   padding: 0 7% 0 7%;
   position: relative; }
 
-#journal-section, header, .get-in-touch {
+#journal-section, header, .get-in-touch, #disciplines-section, #humans-section {
   display: flex;
   flex-flow: row wrap; }
 

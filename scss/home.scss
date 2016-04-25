@@ -65,6 +65,14 @@ body, .get-in-touch {
   }
 }
 
+#disciplines-section {
+  h1 {
+    color: $red;
+    align-self: center;
+    font-size: $h1-big * 1.5;
+  }
+}
+
 
 /****************************************************************************/
 /* TYPOGRAPHY */
@@ -181,7 +189,7 @@ body, .get-in-touch {
   position: relative;
 }
 
-#journal-section, header, .get-in-touch {
+#journal-section, header, .get-in-touch, #disciplines-section, #humans-section {
   display: flex;
   flex-flow: row wrap;
 }

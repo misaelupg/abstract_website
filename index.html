@@ -8,10 +8,15 @@
 <title>ABSTRACT | Digital Agency | Software, Design, Marketing, Innovation Tech, Data</title>
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
+
+<!-- Home CSS -->
 <link rel="stylesheet" type="text/css" href="./css/home.css">
+<!-- Fullpage CSS -->
 <link rel="stylesheet" type="text/css" href="./bower_components/fullpage.js/dist/jquery.fullPage.css" />
 
+<!-- jQuery -->
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Fullpage.js -->
 <script src="./bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
 
 
@@ -19,14 +24,16 @@
 
 </head>
 <body class="home color-transition" id="scene-1">
+<!-- Animated Circle -->
 <div id="circle-focus" ></div>
-
+<!-- Fullpage container -->
 <div id="fullpage">
     <!-- ==========================================================================
     Cover
     ========================================================================== -->
-    <!-- Header -->
+    <!-- Cover Container -->
     <div class="container section" data-anchor="coverSection">
+    <!-- Header -->
     <header class="header">
         <img class="logo fixed-nav-item" src="./img/logo_placeholder.png">
         <nav class="main-nav">
@@ -39,14 +46,14 @@
             </ul><!-- menu -->
         </nav><!-- nav -->
         <a class="nav-item fixed-nav-item" href="">&#43; contact</a>
-    </header><!-- cover -->
+    </header><!-- header -->
         <div class="cover-text">
             <h1>
                 We craft digital experiences for humans.
             </h1>
             <p >We design and develope mobile and web apps, help your brand to stand-out, improve your workflow and services to increase your profits.</p>
-        </div><!-- animtaion container -->
-    </div><!-- container -->
+        </div><!-- cover text -->
+    </div><!-- cover container-->
     
 
     <!-- ==========================================================================
@@ -97,24 +104,27 @@
                 ./img/unsplash_523ae1f5502d6_1_e446eh_ar_16_9,c_fill__c_scale,w_1000.jpg 1000w"
                 src="./img/unsplash_523ae1f5502d6_1_e446eh_ar_16_9,c_fill__c_scale,w_1000.jpg"
                 alt="">
-            </picture>
+            </picture><!-- image post -->
             <div class="summary">
                 <h1 class="journal-headline">How Apple is giving design a bad name.</h1>
                 <h2 class="styled-text">DESIGN</h2>
                 <p>Facts why inkjet printing is very appealing compared to rodinary printing.<img  class="arrow" src="./svg/arrow.svg" alt=""></p>
-            </div>
+            </div><!-- summary -->
             <!-- <div class="circle layer" data-depth="0.3" ></div> -->
-        </div>
-        
-        
-    </section>
+        </div><!-- card -->
+    </section><!-- journal section -->
+
     <!-- Disciplines -->
     <section id="disciplines-section" class="container section" data-anchor="disciplinesSection"> 
-    
-    </section>
+
+    </section> <!-- disciplines section -->
+
+    <!-- Humans [X] -->
     <section id="humans-section" class="container section" data-anchor="humansSection">
-        
-    </section>
+        <!-- We are suppoters of the 20 Global Goals, and and we are truly commited to help achive it
+        within the next 13 days. Find out how we are supporting this endeavor. If your aare a non-profit organizaition and your goals are aligned with any of the 20 goals, letus help you.
+        Support the The Global Goals. We can help you. -->
+    </section><!-- humans section -->
     
     
     <!-- ==========================================================================
@@ -124,7 +134,7 @@
         <div class="touch">
             <h1>Want to work with us?</h1>
             <h2><a href="">hello@abstract.com</a></h2>
-        </div>
+        </div> <!-- touch text -->
         <footer id="footer">
             <div class="social">
                 <ul>
@@ -132,13 +142,13 @@
                     <li><a href=""><div class="social-circle"></div></a></li>
                     <li><a href=""><div class="social-circle"></div></a></li>
                 </ul>
-            </div>
+            </div><!-- social icons -->
             <div class="contact-info">
                 <ul>
                     <li>contact@abstract.com</li>
                     <li>(+52) 442 2308 556</li>
                 </ul>
-            </div>
+            </div><!-- contact info -->
         </footer><!-- footer -->
     </div><!-- get in touch -->
 
@@ -146,20 +156,25 @@
 
 </div>
     <script>
+
         $(document).ready(function() {
+            //Assign basic elements
             var $body = $('body');
             var $circleFocus = $('#circle-focus');
+            //Hide Animated Circle at start
             $circleFocus.hide();
             //Fullpage Pluging Initialization
             $('#fullpage').fullpage({
                 verticalCentered: false,
                 easingcss3: 'cubic-bezier(0.55,0,0.1,1)',
                 normalScrollElements: '.main-nav',
+                //Function to trigger animations
                 onLeave: function(index, nextIndex, direction){
                     var leavingSection = $(this);
                     console.log(index);
                     console.log(nextIndex);
                     console.log(direction);
+                    //Section Properties
                     var sections = [
                         {
                             sectionIndex: 1,
@@ -187,7 +202,7 @@
                         },
                         {
                             sectionIndex: 6,
-                            backgroundColor: '#fbfcff',
+                            backgroundColor: '#374ded',
                         },
                         {
                             sectionIndex: 7,
@@ -198,67 +213,42 @@
                             backgroundColor: '#fbfcff',
                         }
                     ];
-
+                    //After leaving first section (Cover), show circle
                     $circleFocus.show();
+                    //Remove animation class everytime we leave section,  so the animation can be triggered next
                     var cleanAnimation = function() {
                         $circleFocus.removeClass('circle-animation-scaled');
                     };
+                    //Add css properties to change section styles
                     var animateCircle = function() {
+                        //Background color
                         $body.css({'background-color': sections[section].backgroundColor});
+                        //Add class again to add animation scaling to circle
                         $circleFocus.addClass('circle-animation-scaled');
+                        //Change circle color
                         $circleFocus.css({
                             'border-color': sections[section].borderColor
                         });
                     };
+                    //Listen to end of animation, so we can remove animation class
                     $circleFocus[0].addEventListener('animationend', cleanAnimation, false);
 
+                    //Match section to properties
                     for (var section in sections) {
+
                         if (nextIndex === sections[section].sectionIndex) {
-                            
-                            animateCircle();
+
+                            //Hide circle going back to start or last section
                             if (nextIndex === 1 || nextIndex > 4) { $circleFocus.hide(); }
+
+                            animateCircle();
+
                             
                         }
                     }
-                    //
-                    //Make object with properties of each index, and then loop selecting object with index propert passed through function
-                    //
-                    
-                    //after leaving section 1
-                    // if(index == 1 && direction =='down') {
-                    //     console.log('to section 2');
-                    //     $('body.color-transition').css('background-color', '#ffc614');
-                    //     $body.addClass('color-transition');
-                    //     $circleFocus.addClass('circle-animation-scaled');
-                        
-                    // }
-
-                    // else if(index == 2 && direction == 'up'){
-                    //     console.log("Going to section 1!");
-                    //     // $body.removeClass('color-transition');
-                    //     $('body.color-transition').css('background-color', '#1e48f0');
-                    // }
-
-                    //  //after leaving section 2
-                    // if(index == 2 && direction =='down') {
-                    //     console.log('to section 2');
-                    //     $body.addClass('color-transition');
-                        
-                    // }
-
-                    // else if(index == 3 && direction == 'up'){
-                    //     console.log("Going to section 1!");
-                    //     $body.addClass('color-transition');
-                    // }
                 }
 
-            });
-
-            // var bgColors = ['#ffc614', '#503cfe', '#ff415a'];
-            // function changeBgColor(bgColors, index) {
-            //     console.log('Color');
-            // }
-
+            }); //Fullpage Initialization ends here
 
             // Resizing Containers
             initialize();
