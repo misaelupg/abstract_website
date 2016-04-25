@@ -88,12 +88,23 @@ body, .get-in-touch {
 .home h2 {
   font-weight: 600; }
 
-#journal-section h1 {
+#journal-section .journal-headline {
   font-size: 2em;
   margin-top: 1em;
   margin-bottom: 0.3em; }
 #journal-section p {
   line-height: 1.9em; }
+#journal-section .extra-big-headline {
+  font-size: 6em;
+  font-weight: 900;
+  color: #ff415a;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: "PostGrotesk", serif;
+  display: block;
+  position: absolute;
+  right: -100px;
+  bottom: -30px; }
 
 .styled-text {
   -webkit-font-smoothing: antialiased;
@@ -302,8 +313,7 @@ img.arrow {
   .get-in-touch li {
     display: inline-block; }
   .get-in-touch .touch {
-    align-self: flex-end;
-    padding-bottom: 30%; }
+    align-self: flex-end; }
     .get-in-touch .touch a {
       font-weight: 400;
       padding: 7px 0;

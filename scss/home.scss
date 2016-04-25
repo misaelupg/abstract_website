@@ -90,7 +90,7 @@ body, .get-in-touch {
 }
 
 #journal-section {
-  h1 {
+  .journal-headline {
     font-size: $h1-small;
     margin-top: 1em;
     margin-bottom: 0.3em;
@@ -98,6 +98,18 @@ body, .get-in-touch {
   
   p {
     line-height: $line-height-medium;
+  }
+
+  .extra-big-headline {
+    font-size: $h1-big *2;
+    font-weight: 900;
+    color: $red;
+    @include sexy-text();
+    font-family: $post-grotesk;
+    display: block;
+    position: absolute;
+    right: -100px;
+    bottom: -30px;
   }
 }
 
@@ -113,6 +125,7 @@ body, .get-in-touch {
         top: -10px;
         width: 15px;
       }
+
   } 
 
 /****************************************************************************/
@@ -356,7 +369,6 @@ img.arrow {
   }
   .touch {
     align-self: flex-end;
-    padding-bottom: 30%;
     a {
       @include link($grey);
       font-size: 0.7em;
