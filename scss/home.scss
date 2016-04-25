@@ -15,11 +15,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 a {
   text-decoration: none;
 }
-
 
 /*========== List ==========*/
 
@@ -27,18 +25,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  
-} 
-
-body {
-  position: relative;
-  &.color-transition {
-    -webkit-transition: .7s;
-    -moz-transition: .7s;
-    -ms-transition: .7s;
-    -o-transition:.7s;
-    transition: .7s;
-  }
 } 
 
 /****************************************************************************/
@@ -65,14 +51,6 @@ body, .get-in-touch {
   }
 }
 
-#disciplines-section {
-  h1 {
-    color: $red;
-    align-self: center;
-    font-size: $h1-big * 1.5;
-  }
-}
-
 
 /****************************************************************************/
 /* TYPOGRAPHY */
@@ -84,11 +62,9 @@ body, .get-in-touch {
   h1 {
     @include big-short-headline(1);
   }
-
   p {
     @include lora-paragraph();
   }
-
   h1, h2, p {
     @include sexy-text();
   }
@@ -97,17 +73,36 @@ body, .get-in-touch {
   }
 }
 
+/*========== Cover ==========*/
+
+
+.cover-text {
+ h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-top: 20%;
+  }
+  p {
+    @include sexy-text();
+    opacity: 0.7;
+    line-height: $line-height-medium;
+  }
+  h1, p {
+    color: $grey;
+  }
+}
+
+/*========== Header ==========*/
+
 #journal-section {
   .journal-headline {
     font-size: $h1-small;
     margin-top: 1em;
     margin-bottom: 0.3em;
   }
-  
   p {
     line-height: $line-height-medium;
   }
-
   .extra-big-headline {
     font-size: $h1-big *2;
     font-weight: 900;
@@ -133,7 +128,6 @@ body, .get-in-touch {
         top: -10px;
         width: 15px;
       }
-
   } 
 
 /****************************************************************************/
@@ -151,15 +145,12 @@ body, .get-in-touch {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-
   ul {
     display: block;
     position: relative;
-
     li.nav-item {
       padding: 10px 12px 20px 0;
     }
-
     li.nav-item, a {
       @include nav-item(6px, 600);
     }
@@ -193,7 +184,6 @@ body, .get-in-touch {
   display: flex;
   flex-flow: row wrap;
 }
-
 
 img.arrow {
       max-width: 20px;
@@ -230,6 +220,48 @@ img.arrow {
   }
 }
 
+/*========== Star Project 1 ==========*/
+
+.star-project {
+    @include sexy-text();
+    padding-top: 20%;
+    img.device {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: block;
+    // margin-bottom: 1em;
+  }
+  &:nth-of-type(2) {
+    img.device {
+    width: 220%;
+    transform: translate3d(-50%, 0,0);
+    padding-bottom: 20px;
+    }
+  }
+  .copy {
+    position: absolute;
+    bottom: 30px;
+    padding-right: 7%;
+    h1 {
+      display: inline-block;
+      margin: 0;
+      color: $grey;
+    }
+    p {
+      color: $grey;
+    }
+  }
+  .styled-text {
+    color: $grey;
+    right: 5%;
+    &:after {
+        background: $grey;
+    } 
+  } 
+}
+
+
 /*========== Journal Landing ==========*/
 
 #journal-section {
@@ -258,14 +290,12 @@ img.arrow {
     mix-blend-mode: multiply; 
     position: absolute;
   }
-
   picture {
     transform: translate3d(-70%, -30%, 0);
     img {
       width: 100%;
     }
   }
-  
   .styled-text {
     top: 20px;
     right: -20px;
@@ -276,95 +306,10 @@ img.arrow {
   }
 }
 
-
-
-
-/*========== Star Project 1 ==========*/
-
-.star-project {
-    @include sexy-text();
-    padding-top: 20%;
-    img.device {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    display: block;
-
-    // margin-bottom: 1em;
-  }
-  &:nth-of-type(2) {
-    img.device {
-    width: 220%;
-    transform: translate3d(-50%, 0,0);
-    padding-bottom: 20px;
-    }
-  }
-  .copy {
-    position: absolute;
-    bottom: 30px;
-    padding-right: 7%;
-    h1 {
-      display: inline-block;
-      margin: 0;
-      color: $grey;
-    }
-    p {
-      color: $grey;
-    }
-  }
-
-  .styled-text {
-    color: $grey;
-    right: 5%;
-    &:after {
-        background: $grey;
-    } 
-  
-  } 
-}
-
-
-/****************************************************************************/
-/* ANIMATIONS */
-/****************************************************************************/
-
-/*========== Animated Background ==========*/
-
-@keyframes scaleCircle{
-  from {
-    opacity: 0;
-    transform: translate3d(-50%, -50%, 0) scale(0,0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(-50%, -50%, 0) scale(1,1);
-  }
-}
-
-/*========== Text ==========*/
-
-.cover-text {
- h1 {
-    font-size: 2.5em;
-    font-weight: 900;
-    margin-top: 20%;
-  }
-
-  p {
-    @include sexy-text();
-    opacity: 0.7;
-    line-height: $line-height-medium;
-  }
-
-  h1, p {
-    color: $grey;
-  }
-}
-
 /****************************************************************************/
 /* Get In Touch */
 /****************************************************************************/
+
 /*========== Touch ==========*/
 
 .get-in-touch {
@@ -387,7 +332,6 @@ img.arrow {
       padding: 0 5%;
     }
   }
-  
   footer {
     box-sizing: content-box;
     opacity: .7;
@@ -410,8 +354,6 @@ img.arrow {
 }
 
 /*========== Footer ==========*/
-
-
 .social, .contact-info {
   border-top: 1px solid $grey;
   padding-top: 15px;
@@ -424,6 +366,38 @@ img.arrow {
     margin: 3px;
   }
 }
+
+/****************************************************************************/
+/* ANIMATIONS AND TRANSITIONS*/
+/****************************************************************************/
+
+/*========== Animated Circle ==========*/
+
+@keyframes scaleCircle{
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0,0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) scale(1,1);
+  }
+}
+
+/*========== Animated Background Color ==========*/
+
+body {
+  position: relative;
+  &.color-transition {
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition:.7s;
+    transition: .7s;
+  }
+} 
+
 
 /****************************************************************************/
 /* Media Queries */
