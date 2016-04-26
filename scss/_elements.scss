@@ -16,3 +16,15 @@
     top: $top;
     border: $border-thickness solid $color;
 }
+
+@mixin flat-button($color) {
+    border: none;
+    background: none;
+    font-size: $link;
+    color: $color;
+    font-family: $post-grotesk;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    padding: 10px;
+    @include sexy-text();
+}

@@ -152,7 +152,7 @@ body, .get-in-touch {
       padding: 10px 12px 20px 0;
     }
     li.nav-item, a {
-      @include nav-item(6px, 600);
+      @include nav-item(.6em, 600);
     }
     .active {
       a:after {
@@ -180,7 +180,7 @@ body, .get-in-touch {
   position: relative;
 }
 
-#journal-section, header, .get-in-touch, #disciplines-section, #humans-section {
+#journal-section, header, .get-in-touch, #humans-section {
   display: flex;
   flex-flow: row wrap;
 }
@@ -344,7 +344,7 @@ img.arrow {
       text-align: right;
       li {
         display: block;
-        font-weight: 400;
+        font-weight: 200;
         &:nth-child(1) {
           margin-bottom: 5px;
         }
@@ -364,6 +364,50 @@ img.arrow {
     border-radius: 100%;
     background-color: $grey;
     margin: 3px;
+  }
+}
+
+#disciplines-section {
+  padding-top: 7%;
+  color: $grey;
+  #services {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  button {
+    @include flat-button($grey);
+  }
+  ul {
+    display: block;
+    &.services-list li {
+      font-weight: 200;
+      list-style: circle outside; 
+      padding: 8px 0;
+      opacity: 0.9;
+    }
+    &.disciplines-categories {
+      margin: 0 1em;
+      width: 100%;
+      display: block;
+      position: relative;
+      li.active {
+        position:relative;
+        &:before {
+        background: $grey;
+        content: ''; 
+        height: 3px;
+        left: -.5sem;
+        bottom: 1.05em;
+        position: absolute;
+        width: 10px;
+      }
+      }
+    }
+    &.services-list {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 10em;
+    }
   }
 }
 

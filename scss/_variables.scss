@@ -84,13 +84,13 @@ $black-lighter: #212121;
 @font-face {
   font-family: 'PostGrotesk';
   font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/PostGrotesk-Book.eot'), 
-  url('../fonts/PostGrotesk-Book.woff2') format('woff2'),
-  url('../fonts/PostGrotesk-Book.woff') format('woff'),
-  url('../fonts/PostGrotesk-Book.ttf') format('truetype'),
-  url('../fonts/PostGrotesk-Book.svg#Lora-Book') format('svg'),
-  url('../fonts/PostGrotesk-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  src: url('../fonts/PostGrotesk-Light.eot'), 
+  url('../fonts/PostGrotesk-Light.woff2') format('woff2'),
+  url('../fonts/PostGrotesk-Light.woff') format('woff'),
+  url('../fonts/PostGrotesk-Light.ttf') format('truetype'),
+  url('../fonts/PostGrotesk-Light.svg#Lora-Light') format('svg'),
+  url('../fonts/PostGrotesk-Light.eot?#iefix') format('embedded-opentype');
 }
 
 
