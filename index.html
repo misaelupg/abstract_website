@@ -25,12 +25,23 @@
 </head>
 <body class="home color-transition" id="scene-1">
 <!-- Animated Circle -->
-<div id="circle-focus" ></div>
+<div id="circleFocus" ></div>
 <!-- Fullpage container -->
 <div id="fullpage">
     <!-- ==========================================================================
     Cover
     ========================================================================== -->
+    <!-- Animated Figures -->
+    <div class="cover-animated">
+        <div id="figure1" class="figure"></div>
+        <div id="figure2" class="figure"></div>
+        <div id="figure3" class="figure"></div>
+        <div id="figure4" class="figure"></div>
+        <div id="figure5" class="figure"></div>
+        <div id="figure6" class="figure"></div>
+        <div id="figure7" class="figure"></div>
+        <div id="figure8" class="figure"></div>
+    </div>
     <!-- Cover Container -->
     <div class="container section" data-anchor="coverSection">
     <!-- Header -->
@@ -160,7 +171,7 @@
         $(document).ready(function() {
             //Assign basic elements
             var $body = $('body');
-            var $circleFocus = $('#circle-focus');
+            var $circleFocus = $('#circleFocus');
             //Hide Animated Circle at start
             $circleFocus.hide();
             //Fullpage Pluging Initialization
@@ -178,7 +189,7 @@
                     var sections = [
                         {
                             sectionIndex: 1,
-                            backgroundColor: '#0011F7',
+                            backgroundColor: '#1e48f0',
                             borderColor: '#4768f1'
                         },
                         {

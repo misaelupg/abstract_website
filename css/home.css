@@ -51,28 +51,14 @@ ul {
   margin: 0;
   padding: 0; }
 
-body {
-  position: relative; }
-  body.color-transition {
-    -webkit-transition: .7s;
-    -moz-transition: .7s;
-    -ms-transition: .7s;
-    -o-transition: .7s;
-    transition: .7s; }
-
 /****************************************************************************/
 /* Color */
 /****************************************************************************/
 body, .get-in-touch {
-  background-color: #0011F7; }
+  background-color: #1e48f0; }
 
 .star-project:nth-child(3) img.arrow {
   color: #fbfcff; }
-
-#disciplines-section h1 {
-  color: #ff415a;
-  align-self: center;
-  font-size: 4.5em; }
 
 /****************************************************************************/
 /* TYPOGRAPHY */
@@ -93,6 +79,20 @@ body, .get-in-touch {
 .home h2 {
   font-weight: 600; }
 
+/*========== Cover ==========*/
+.cover-text h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-top: 20%; }
+.cover-text p {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  opacity: 0.7;
+  line-height: 1.9em; }
+.cover-text h1, .cover-text p {
+  color: #fbfcff; }
+
+/*========== Header ==========*/
 #journal-section .journal-headline {
   font-size: 2em;
   margin-top: 1em;
@@ -200,7 +200,7 @@ img.arrow {
     order: -1; }
 
 /*========== Star Projects ==========*/
-#circle-focus {
+#circleFocus {
   width: 500px;
   height: 500px;
   border-radius: 100%;
@@ -211,8 +211,38 @@ img.arrow {
   border: 95px solid #ffd143;
   transform: translate(-50%, -50%) scale(1, 1);
   transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44); }
-  #circle-focus.circle-animation-scaled {
+  #circleFocus.circle-animation-scaled {
     animation: scaleCircle 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0s 1 forwards; }
+
+/*========== Star Project 1 ==========*/
+.star-project {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  padding-top: 20%; }
+  .star-project img.device {
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+    display: block; }
+  .star-project:nth-of-type(2) img.device {
+    width: 220%;
+    transform: translate3d(-50%, 0, 0);
+    padding-bottom: 20px; }
+  .star-project .copy {
+    position: absolute;
+    bottom: 30px;
+    padding-right: 7%; }
+    .star-project .copy h1 {
+      display: inline-block;
+      margin: 0;
+      color: #fbfcff; }
+    .star-project .copy p {
+      color: #fbfcff; }
+  .star-project .styled-text {
+    color: #fbfcff;
+    right: 5%; }
+    .star-project .styled-text:after {
+      background: #fbfcff; }
 
 /*========== Journal Landing ==========*/
 #journal-section {
@@ -250,60 +280,6 @@ img.arrow {
     color: #212121; }
     #journal-section .styled-text:after {
       background-color: #ff6c80; }
-
-/*========== Star Project 1 ==========*/
-.star-project {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  padding-top: 20%; }
-  .star-project img.device {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    display: block; }
-  .star-project:nth-of-type(2) img.device {
-    width: 220%;
-    transform: translate3d(-50%, 0, 0);
-    padding-bottom: 20px; }
-  .star-project .copy {
-    position: absolute;
-    bottom: 30px;
-    padding-right: 7%; }
-    .star-project .copy h1 {
-      display: inline-block;
-      margin: 0;
-      color: #fbfcff; }
-    .star-project .copy p {
-      color: #fbfcff; }
-  .star-project .styled-text {
-    color: #fbfcff;
-    right: 5%; }
-    .star-project .styled-text:after {
-      background: #fbfcff; }
-
-/****************************************************************************/
-/* ANIMATIONS */
-/****************************************************************************/
-/*========== Animated Background ==========*/
-@keyframes scaleCircle {
-  from {
-    opacity: 0;
-    transform: translate3d(-50%, -50%, 0) scale(0, 0); }
-  to {
-    opacity: 1;
-    transform: translate3d(-50%, -50%, 0) scale(1, 1); } }
-/*========== Text ==========*/
-.cover-text h1 {
-  font-size: 2.5em;
-  font-weight: 900;
-  margin-top: 20%; }
-.cover-text p {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  opacity: 0.7;
-  line-height: 1.9em; }
-.cover-text h1, .cover-text p {
-  color: #fbfcff; }
 
 /****************************************************************************/
 /* Get In Touch */
@@ -362,6 +338,71 @@ img.arrow {
     border-radius: 100%;
     background-color: #fbfcff;
     margin: 3px; }
+
+/****************************************************************************/
+/* ANIMATIONS AND TRANSITIONS*/
+/****************************************************************************/
+/*========== Animated Circle ==========*/
+@keyframes scaleCircle {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0) scale(1, 1); } }
+/*========== Animated Background Color ==========*/
+body {
+  position: relative; }
+  body.color-transition {
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+    transition: .7s; }
+
+/*========== Cover ==========*/
+.cover-animated {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+  .cover-animated .figure {
+    position: absolute;
+    background-color: #fbfcff;
+    width: 200px;
+    height: 200px; }
+  .cover-animated #figure1, .cover-animated #figure2, .cover-animated #figure3 {
+    background-color: #ff415a;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
+    bottom: 42px;
+    right: -100px; }
+  .cover-animated #figure1 {
+    transform: rotate(-45deg); }
+  .cover-animated #figure2 {
+    transform: rotate(-45deg) scale(0.7, 0.7); }
+  .cover-animated #figure3 {
+    transform: rotate(-45deg) scale(0.5, 0.5); }
+  .cover-animated #figure4, .cover-animated #figure5 {
+    background-color: #ffc614;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
+    bottom: -99px;
+    right: 41px; }
+  .cover-animated #figure4 {
+    transform: rotate(-45deg); }
+  .cover-animated #figure5 {
+    transform: rotate(-45deg) scale(0.7, 0.7); }
+  .cover-animated #figure6, .cover-animated #figure7 {
+    border-radius: 100%;
+    background-color: #1e48f0;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2); }
+  .cover-animated #figure6 {
+    top: 30%;
+    left: 30%; }
+  .cover-animated #figure8 {
+    background: #1e48f0;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(-45deg) scale(3, 3);
+    top: 20%;
+    left: -100px; }
 
 /****************************************************************************/
 /* Media Queries */
