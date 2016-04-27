@@ -368,11 +368,11 @@ img.arrow {
 }
 
 #disciplines-section {
-  display: flex;
-  flex-flow: column wrap;
+  // display: flex;
+  // flex-flow: column wrap;
   padding-top: 7%;
   color: $grey;
-  justify-content: space-around;
+  // justify-content: space-around;
   #services {
     display: flex;
     flex-flow: row nowrap;
@@ -380,9 +380,15 @@ img.arrow {
   }
   button {
     @include flat-button($grey);
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
   }
   ul {
-    display: block;
+    // display: block;
     &.services-list li {
       font-weight: 200;
       list-style: circle outside; 
@@ -392,7 +398,7 @@ img.arrow {
     &.disciplines-categories {
       margin: 0 3em 0 -0.4em;;
       width: 100%;
-      display: block;
+      // display: block;
       position: relative;
       li.active {
         position:relative;
@@ -414,11 +420,23 @@ img.arrow {
   }
   .figure-services {
     width: 100%;
+    position: absolute;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.7s cubic-bezier(0.55,0,0.1,1);
     svg {
       position: absolute;
-      transform: translate3d(30%, 10%, 0) scale(2,2);
+      &:nth-child(1) {
+      transform: translate3d(0, -20%, 0);
+      width: 140%;
+      }
+      &:nth-child(2) {
+        transform: translate3d(200%, 45%, 0);
+      }
+      &:nth-child(3) {
+        transform: translate3d(350%, 0, 0);
+        
+      }
     }
-    
   }
 }
 
@@ -451,7 +469,7 @@ img.arrow {
 
 body {
   position: relative;
-  &.color-transition {
+  &.transition {
     -webkit-transition: .7s;
     -moz-transition: .7s;
     -ms-transition: .7s;

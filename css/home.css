@@ -340,12 +340,8 @@ img.arrow {
     margin: 3px; }
 
 #disciplines-section {
-  display: flex;
-  flex-flow: column wrap;
   padding-top: 7%;
-  color: #fbfcff;
-  justify-content: space-between;
-  }
+  color: #fbfcff; }
   #disciplines-section #services {
     display: flex;
     flex-flow: row nowrap;
@@ -361,37 +357,46 @@ img.arrow {
     padding: 10px;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased; }
-  #disciplines-section ul {
-    display: block; }
-    #disciplines-section ul.services-list li {
-      font-weight: 200;
-      list-style: circle outside;
-      padding: 8px 0;
-      opacity: 0.9; }
-    #disciplines-section ul.disciplines-categories {
-      margin: 0 3em 0 -0.4em;
-      width: 100%;
-      display: block;
+    #disciplines-section button:active {
+      outline: none; }
+    #disciplines-section button:focus {
+      outline: none; }
+  #disciplines-section ul.services-list li {
+    font-weight: 200;
+    list-style: circle outside;
+    padding: 8px 0;
+    opacity: 0.9; }
+  #disciplines-section ul.disciplines-categories {
+    margin: 0 3em 0 -0.4em;
+    width: 100%;
+    position: relative; }
+    #disciplines-section ul.disciplines-categories li.active {
       position: relative; }
-      #disciplines-section ul.disciplines-categories li.active {
-        position: relative; }
-        #disciplines-section ul.disciplines-categories li.active:before {
-          background: #fbfcff;
-          content: '';
-          height: 3px;
-          left: -.5em;
-          bottom: 1.05em;
-          position: absolute;
-          width: 10px; }
-    #disciplines-section ul.services-list {
-      width: 100%;
-      max-width: 10em; }
+      #disciplines-section ul.disciplines-categories li.active:before {
+        background: #fbfcff;
+        content: '';
+        height: 3px;
+        left: -.5em;
+        bottom: 1.05em;
+        position: absolute;
+        width: 10px; }
+  #disciplines-section ul.services-list {
+    width: 100%;
+    max-width: 10em; }
   #disciplines-section .figure-services {
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.7s cubic-bezier(0.55, 0, 0.1, 1); }
     #disciplines-section .figure-services svg {
-      position: absolute;
-      transform: translate3d(30%, 10%, 0) scale(2, 2);
-      }
+      position: absolute; }
+      #disciplines-section .figure-services svg:nth-child(1) {
+        transform: translate3d(0, -20%, 0);
+        width: 140%; }
+      #disciplines-section .figure-services svg:nth-child(2) {
+        transform: translate3d(200%, 45%, 0); }
+      #disciplines-section .figure-services svg:nth-child(3) {
+        transform: translate3d(350%, 0, 0); }
 
 /*========== Humans ==========*/
 #humans-section img {
@@ -411,7 +416,7 @@ img.arrow {
 /*========== Animated Background Color ==========*/
 body {
   position: relative; }
-  body.color-transition {
+  body.transition {
     -webkit-transition: .7s;
     -moz-transition: .7s;
     -ms-transition: .7s;
