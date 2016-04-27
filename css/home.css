@@ -340,11 +340,16 @@ img.arrow {
     margin: 3px; }
 
 #disciplines-section {
+  display: flex;
+  flex-flow: column wrap;
   padding-top: 7%;
-  color: #fbfcff; }
+  color: #fbfcff;
+  justify-content: space-between;
+  }
   #disciplines-section #services {
     display: flex;
-    flex-flow: row nowrap; }
+    flex-flow: row nowrap;
+    transform: scale(0.8, 0.8); }
   #disciplines-section button {
     border: none;
     background: none;
@@ -364,7 +369,7 @@ img.arrow {
       padding: 8px 0;
       opacity: 0.9; }
     #disciplines-section ul.disciplines-categories {
-      margin: 0 1em;
+      margin: 0 3em 0 -0.4em;
       width: 100%;
       display: block;
       position: relative; }
@@ -379,9 +384,18 @@ img.arrow {
           position: absolute;
           width: 10px; }
     #disciplines-section ul.services-list {
-      margin: 0 auto;
       width: 100%;
       max-width: 10em; }
+  #disciplines-section .figure-services {
+    width: 100%; }
+    #disciplines-section .figure-services svg {
+      position: absolute;
+      transform: translate3d(30%, 10%, 0) scale(2, 2);
+      }
+
+/*========== Humans ==========*/
+#humans-section img {
+  transform: translate3d(-50%, 10%, 0); }
 
 /****************************************************************************/
 /* ANIMATIONS AND TRANSITIONS*/
@@ -411,7 +425,6 @@ body {
   position: absolute; }
   .cover-animated .figure {
     position: absolute;
-    background-color: #fbfcff;
     width: 200px;
     height: 200px; }
   .cover-animated #figure1, .cover-animated #figure2, .cover-animated #figure3 {

@@ -368,11 +368,15 @@ img.arrow {
 }
 
 #disciplines-section {
+  display: flex;
+  flex-flow: column wrap;
   padding-top: 7%;
   color: $grey;
+  justify-content: space-around;
   #services {
     display: flex;
     flex-flow: row nowrap;
+    transform: scale(0.8, 0.8);
   }
   button {
     @include flat-button($grey);
@@ -386,7 +390,7 @@ img.arrow {
       opacity: 0.9;
     }
     &.disciplines-categories {
-      margin: 0 1em;
+      margin: 0 3em 0 -0.4em;;
       width: 100%;
       display: block;
       position: relative;
@@ -396,7 +400,7 @@ img.arrow {
         background: $grey;
         content: ''; 
         height: 3px;
-        left: -.5sem;
+        left: -.5em;
         bottom: 1.05em;
         position: absolute;
         width: 10px;
@@ -404,10 +408,24 @@ img.arrow {
       }
     }
     &.services-list {
-      margin: 0 auto;
       width: 100%;
       max-width: 10em;
     }
+  }
+  .figure-services {
+    width: 100%;
+    svg {
+      position: absolute;
+      transform: translate3d(30%, 10%, 0) scale(2,2);
+    }
+    
+  }
+}
+
+/*========== Humans ==========*/
+#humans-section {
+  img {
+    transform: translate3d(-50%, 10%, 0);
   }
 }
 
@@ -449,7 +467,6 @@ body {
   position: absolute;
     .figure {
       position: absolute;
-      background-color: $grey;
       width: 200px;
       height: 200px;
 
