@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
     // Default task
     gulp.task('default', ['clean'], function() {
-        gulp.start('usemin', 'imagemin','copyfonts');
+        gulp.start('usemin','copyfonts');
     });
 
     gulp.task('hello', function() {
@@ -37,13 +37,6 @@ var gulp = require('gulp'),
       .pipe(gulp.dest('dist/'));
 });
 
-// Images
-gulp.task('imagemin', function() {
-  return del(['dist/images']), gulp.src('/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/img'))
-    .pipe(notify({ message: 'Images task complete' }));
-});
 
 //Copy fonts
 gulp.task('copyfonts', ['clean'], function() {
