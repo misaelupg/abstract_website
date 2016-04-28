@@ -169,8 +169,10 @@ body, .get-in-touch {
   padding: 0 7% 0 7%;
   position: relative; }
 
+.flex {
+  display: flex; }
+
 #journal-section, header, .get-in-touch, #humans-section {
-  display: flex;
   flex-flow: row wrap; }
 
 img.arrow {
@@ -342,6 +344,9 @@ img.arrow {
 #disciplines-section {
   padding-top: 7%;
   color: #fbfcff; }
+  #disciplines-section .flex {
+    flex-flow: row wrap;
+    height: 100%; }
   #disciplines-section #services {
     display: flex;
     flex-flow: row nowrap;

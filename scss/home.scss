@@ -180,8 +180,11 @@ body, .get-in-touch {
   position: relative;
 }
 
-#journal-section, header, .get-in-touch, #humans-section {
+.flex {
   display: flex;
+}
+
+#journal-section, header, .get-in-touch, #humans-section {
   flex-flow: row wrap;
 }
 
@@ -368,6 +371,10 @@ img.arrow {
 }
 
 #disciplines-section {
+  .flex {
+    flex-flow: row wrap;
+    height: 100%;
+  }
   // display: flex;
   // flex-flow: column wrap;
   padding-top: 7%;
@@ -434,7 +441,6 @@ img.arrow {
       }
       &:nth-child(3) {
         transform: translate3d(350%, 0, 0);
-        
       }
     }
   }
