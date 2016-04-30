@@ -8,9 +8,8 @@
     font-size: $link;
     font-weight: $font-weight;
     letter-spacing: $letter-spacing;
-    position: relative;
-    display: inline-block;
     text-decoration: none;
+    display: inline-block;
 }
 
 @mixin big-short-headline($x-times) {

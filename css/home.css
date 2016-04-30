@@ -133,33 +133,18 @@ body, .get-in-touch {
 /****************************************************************************/
 /*========== Fixed Top Nav ==========*/
 /*========== Main Nav ==========*/
-.main-nav {
-  -webkit-overflow-scrolling: touch;
-  display: block;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap; }
-  .main-nav ul {
-    display: block;
-    position: relative; }
-    .main-nav ul li.nav-item {
-      padding: 10px 12px 20px 0; }
-    .main-nav ul li.nav-item, .main-nav ul a {
-      color: #fbfcff;
-      font-size: 0.9em;
-      font-weight: 600;
-      letter-spacing: 0.6em;
-      position: relative;
-      display: inline-block;
-      text-decoration: none; }
-    .main-nav ul .active a:after {
-      background: #fbfcff;
-      content: '';
-      height: 3px;
-      left: 0;
-      position: absolute;
-      top: 28px;
-      width: 30px; }
+.main-nav ul {
+  position: relative;
+  display: inline-block; }
+  .main-nav ul li.nav-item {
+    padding: 10px 12px 20px 0; }
+  .main-nav ul li.nav-item, .main-nav ul a {
+    color: #fbfcff;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1em;
+    text-decoration: none;
+    display: inline-block; }
 
 /****************************************************************************/
 /* Layout */
@@ -184,22 +169,16 @@ img.arrow {
 .header {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  padding-top: 20px;
-  justify-content: space-between; }
+  padding-top: 20px; }
   .header img.logo {
-    max-height: 20px;
-    order: -2;
-    flex-basis: auto;
-    margin-bottom: 10px; }
+    max-height: 20px; }
   .header a {
     color: #fbfcff;
     font-size: 0.9em;
     font-weight: 900;
-    letter-spacing: 0;
-    position: relative;
-    display: inline-block;
+    letter-spacing: 1em;
     text-decoration: none;
-    order: -1; }
+    display: inline-block; }
 
 /*========== Star Projects ==========*/
 #circleFocus {
@@ -255,7 +234,7 @@ img.arrow {
     box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 440px;
-    background-color: #fbfcff;
+    background-color: #1e48f0;
     align-self: center; }
     #journal-section .card picture {
       mix-blend-mode: multiply; }

@@ -35,14 +35,6 @@ body, .get-in-touch {
   background-color: $blue;
 }
 
-.star-project:first-child {
-  // background-color: $yellow;
-}
-
-.star-project:nth-of-type(2) {
-  // background-color: #503cfe;
-}
-
 .star-project:nth-child(3) {
   // background-color: $red;
   // height: 300px;
@@ -140,32 +132,16 @@ body, .get-in-touch {
 /*========== Main Nav ==========*/
 
 .main-nav {
-  -webkit-overflow-scrolling: touch;
-  display: block;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
   ul {
-    display: block;
     position: relative;
+    display: inline-block;
     li.nav-item {
       padding: 10px 12px 20px 0;
     }
     li.nav-item, a {
-      @include nav-item(.6em, 600);
+      @include nav-item(1em, 600);
     }
-    .active {
-      a:after {
-        background: $grey;
-        content: ''; 
-        height: 3px;
-        left: 0;
-        position: absolute;
-        top: 28px;
-        width: 30px;
-      }
     }
-  }
 }
 
 /****************************************************************************/
@@ -200,16 +176,11 @@ img.arrow {
 .header {
   @include sexy-text();
   padding-top: 20px;
-  justify-content: space-between;
   img.logo {
     max-height: 20px;
-    order: -2;
-    flex-basis: auto;
-    margin-bottom: 10px;
   }
   a{
-    @include nav-item(0, 900);
-    order: -1;
+    @include nav-item(1em, 900);
   }
 }
 
@@ -549,21 +520,6 @@ body {
 
 /*========== Desktop ==========*/
 
-// @media screen and (min-width: 1000px) {
-//   header {
-//   display: flex;
-//   flex-flow: row wrap;
-//   padding-top: 20px;
-//   justify-content: space-between;
-//   img.logo {
-//     max-height: 20px;
-//     order: -2;
-//     flex-basis: auto;
-//     margin-bottom: 10px;
-//   }
-//   a{
-//     @include nav-item(0, 900);
-//     order: -1;
-//   }
-// }
-// }
+@media screen and (min-width: 1600px) {
+  
+}
