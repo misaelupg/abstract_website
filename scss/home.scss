@@ -7,10 +7,12 @@
 /* Delete Default Styles */
 /****************************************************************************/
 
-/*========== Common Fixes ==========*/
+/*========== Universal ==========*/
 html {
+  @include sexy-text;
   box-sizing: border-box;
   font-family: $post-grotesk;
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,9 +20,6 @@ html {
 a {
   text-decoration: none;
 }
-
-/*========== List ==========*/
-
 ul {
   list-style: none;
   margin: 0;
@@ -28,498 +27,58 @@ ul {
 } 
 
 /****************************************************************************/
-/* Color */
+/* Cover */
 /****************************************************************************/
-
-body, .get-in-touch {
-  background-color: $blue;
-}
-
-.star-project:nth-child(3) {
-  // background-color: $red;
-  // height: 300px;
-  img.arrow {
-    color: $grey;
-  }
-}
-
-
-/****************************************************************************/
-/* TYPOGRAPHY */
-/****************************************************************************/
-
-/*========== General ==========*/
-
-.home {
-  h1 {
-    @include big-short-headline(1);
-  }
-  p {
-    @include lora-paragraph();
-  }
-  h1, h2, p {
-    @include sexy-text();
-  }
-  h2 {
-    font-weight: 600;
-  }
-}
-
-/*========== Cover ==========*/
-
-
-.cover-text {
- h1 {
-    font-size: 2.5em;
-    font-weight: 900;
-    margin-top: 20%;
-  }
-  p {
-    @include sexy-text();
-    opacity: 0.7;
-    line-height: $line-height-medium;
-  }
-  h1, p {
-    color: $grey;
-  }
-}
-
-/*========== Header ==========*/
-
-#journal-section {
-  .journal-headline {
-    font-size: $h1-small;
-    margin-top: 1em;
-    margin-bottom: 0.3em;
-  }
-  p {
-    line-height: $line-height-medium;
-  }
-  .extra-big-headline {
-    font-size: $h1-big *2;
-    font-weight: 900;
-    color: $red;
-    @include sexy-text();
-    font-family: $post-grotesk;
-    display: block;
-    position: absolute;
-    right: -100px;
-    bottom: -30px;
-  }
-}
-
-.styled-text {
-    @include sexy-text();
-    @include styled-text();
-    &:after {
-        background: $black-lighter;
-        content: ''; 
-        height: 2px;
-        left: 0px;
-        position: absolute;
-        top: -10px;
-        width: 15px;
-      }
-  } 
-
-/****************************************************************************/
-/* NAVIGATION */
-/****************************************************************************/
-
-/*========== Fixed Top Nav ==========*/
-
-
-/*========== Main Nav ==========*/
-
-.main-nav {
-  ul {
-    position: relative;
-    display: inline-block;
-    li.nav-item {
-      padding: 10px 12px 20px 0;
-    }
-    li.nav-item, a {
-      @include nav-item(1em, 600);
-    }
-    }
-}
-
-/****************************************************************************/
-/* Layout */
-/****************************************************************************/
-
-/*========== General ==========*/
-
-.container {
-  padding: 0 7% 0 7%;
-  // min-height: 247px;
-  position: relative;
-}
-
-.flex {
-  display: flex;
-}
-
-#journal-section, header, .get-in-touch, #humans-section {
-  flex-flow: row wrap;
-}
-
-img.arrow {
-      max-width: 20px;
-      display: inline-block;
-      margin-left: 1rem;
-    }
-
-
-/*========== Header ==========*/
-
-.header {
-  @include sexy-text();
-  padding-top: 20px;
-  img.logo {
-    max-height: 20px;
-  }
-  a{
-    @include nav-item(1em, 900);
-  }
-}
-
-/*========== Star Projects ==========*/
 #circleFocus {
   @include make-stroke-circle(500px, $yellow-lighter, 50%, 50%, normal, 95px);
-  transform: translate(-50%, -50%) scale(1,1);
-  transition: all 0.6s cubic-bezier(.87,-.41,.19,1.44);
+  transform: translate(-50%, -50%) scale(1, 1);
+  transition: transform .6s cubic-bezier(.87, -.41, .19, 1.44);
+
   &.circle-animation-scaled {      
-  animation: scaleCircle 0.7s cubic-bezier(.87,-.41,.19,1.44) 0s 1 forwards;
+    animation: scaleCircle .7s cubic-bezier(.87, -.41, .19, 1.44) 0s 1 forwards;
   }
+
 }
 
-/*========== Star Project 1 ==========*/
+.container {
+  margin: 0 auto;
+  width: 90%;
 
-.star-project {
-    @include sexy-text();
-    padding-top: 20%;
-    img.device {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    display: block;
-    // margin-bottom: 1em;
+  &.fluid {
+    width: 100%;
   }
-  &:nth-of-type(2) {
-    img.device {
-    width: 220%;
-    transform: translate3d(-50%, 0,0);
-    padding-bottom: 20px;
-    }
-  }
-  .copy {
-    position: absolute;
-    bottom: 30px;
-    padding-right: 7%;
-    h1 {
-      display: inline-block;
-      margin: 0;
+
+}
+
+.nav-item {
+  @include link($grey);
+
+  a {
+
+    &:link, &:visited, &:active, &:hover {
       color: $grey;
     }
-    p {
-      color: $grey;
-    }
-  }
-  .styled-text {
-    color: $grey;
-    right: 5%;
-    &:after {
-        background: $grey;
-    } 
-  } 
-}
 
-
-/*========== Journal Landing ==========*/
-
-#journal-section {
-  position: relative;
-  .card {
-    position: relative;
-    @include card(440px, 100%, $grey);
-    align-self: center;
-    picture {
-      mix-blend-mode: multiply;
-    }
-    .summary {
-      padding: 0 2em; 
-    }
-    h2 {
-      color: $red-lighter;
-      font-weight: 900;
-    }
   }
-  .circle {
-    width:100px; 
-    height: 100px;
-    background-color: $yellow; 
-    left:-16px; 
-    top: 200px;
-    mix-blend-mode: multiply; 
-    position: absolute;
-  }
-  picture {
-    transform: translate3d(-70%, -30%, 0);
-    img {
-      width: 100%;
-    }
-  }
-  .styled-text {
-    top: 20px;
-    right: -20px;
-    color: $black-lighter;
-    &:after {
-      background-color: $red-lighter;
-    }
-  }
-}
-
-/****************************************************************************/
-/* Get In Touch */
-/****************************************************************************/
-
-/*========== Touch ==========*/
-
-.get-in-touch {
-  @include sexy-text();
-  justify-content: space-around;
-  color: $grey;
-  text-align: center;
-  li {
-    display: inline-block;
-  }
-  .touch {
-    align-self: flex-end;
-    a {
-      @include link($grey);
-      font-size: 0.7em;
-    }
-    h1 {
-      font-size: 2.5em;
-      font-weight: 600;
-      padding: 0 5%;
-    }
-  }
-  footer {
-    box-sizing: content-box;
-    opacity: .7;
-    display: inherit;
-    flex-flow: row nowrap;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-    .contact-info {
-      text-align: right;
-      li {
-        display: block;
-        font-weight: 200;
-        &:nth-child(1) {
-          margin-bottom: 5px;
-        }
-      }
-    }
-  }
-}
-
-/*========== Footer ==========*/
-.social, .contact-info {
-  border-top: 1px solid $grey;
-  padding-top: 15px;
-  margin-bottom: 15px;
-  .social-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: $grey;
-    margin: 3px;
-  }
-}
-
-#disciplines-section {
-  .flex {
-    flex-flow: row wrap;
-    height: 100%;
-  }
-  // display: flex;
-  // flex-flow: column wrap;
-  padding-top: 7%;
-  color: $grey;
-  // justify-content: space-around;
-  #services {
-    display: flex;
-    flex-flow: row nowrap;
-    transform: scale(0.8, 0.8);
-  }
-  button {
-    @include flat-button($grey);
-    &:active {
-      outline: none;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
-  ul {
-    // display: block;
-    &.services-list li {
-      font-weight: 200;
-      list-style: circle outside; 
-      padding: 8px 0;
-      opacity: 0.9;
-    }
-    &.disciplines-categories {
-      margin: 0 3em 0 -0.4em;;
-      width: 100%;
-      // display: block;
-      position: relative;
-      li.active {
-        position:relative;
-        &:before {
-        background: $grey;
-        content: ''; 
-        height: 3px;
-        left: -.5em;
-        bottom: 1.05em;
-        position: absolute;
-        width: 10px;
-      }
-      }
-    }
-    &.services-list {
-      width: 100%;
-      max-width: 10em;
-    }
-  }
-  .figure-services {
-    width: 100%;
-    position: absolute;
-    transform: translate3d(0, 0, 0);
-    transition: all 0.7s cubic-bezier(0.55,0,0.1,1);
-    svg {
-      position: absolute;
-      &:nth-child(1) {
-      transform: translate3d(0, -20%, 0);
-      width: 140%;
-      }
-      &:nth-child(2) {
-        transform: translate3d(200%, 45%, 0);
-      }
-      &:nth-child(3) {
-        transform: translate3d(350%, 0, 0);
-      }
-    }
-  }
-}
-
-/*========== Humans ==========*/
-#humans-section {
-  img {
-    transform: translate3d(-50%, 10%, 0);
-  }
-}
-
-/****************************************************************************/
-/* ANIMATIONS AND TRANSITIONS*/
-/****************************************************************************/
-
-/*========== Animated Circle ==========*/
-
-@keyframes scaleCircle{
-  from {
-    opacity: 0;
-    transform: translate3d(-50%, -50%, 0) scale(0,0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(-50%, -50%, 0) scale(1,1);
-  }
-}
-
-/*========== Animated Background Color ==========*/
-
-body {
-  position: relative;
-  &.transition {
-    -webkit-transition: .7s;
-    -moz-transition: .7s;
-    -ms-transition: .7s;
-    -o-transition:.7s;
-    transition: .7s;
-  }
-} 
-
-/*========== Cover ==========*/
-.cover-animated {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-    .figure {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-
-    }
-    #figure1, #figure2, #figure3 {
-      background-color: $red;
-      box-shadow: 0 20px 80px 0 rgba(0,0,0,.2); 
-      bottom: 42px;
-      right: -100px;
-    }
-    #figure1 {
-      transform: rotate(-45deg);
-    }
-    #figure2 {
-      transform: rotate(-45deg) scale(0.7, 0.7);
-    }
-    #figure3 {
-      transform: rotate(-45deg) scale(0.5, 0.5);
-    }
-    #figure4, #figure5 {
-      background-color: $yellow;
-      box-shadow: 0 20px 80px 0 rgba(0,0,0,.2);
-      bottom: -99px;
-      right: 41px;
-    }
-    #figure4 {
-      transform: rotate(-45deg);
-    }
-    #figure5 {
-      transform: rotate(-45deg) scale(0.7, 0.7);
-    }
-    #figure6, #figure7 {
-      border-radius: 100%;
-      background-color: $blue;
-      box-shadow: 0 20px 80px 0 rgba(0,0,0,.2);
-    }
-    #figure6 {
-      top: 30%;
-      left: 30%;
-    }
-    #figure8 {
-      background: $blue;
-      box-shadow: 0 20px 80px 0 rgba(0,0,0,.2);
-      transform: rotate(-45deg) scale(3,3);
-      top: 20%;
-      left: -100px;
-    }
-
 
 }
 
+.main-nav {
+  padding: 0 5%;
 
-/****************************************************************************/
-/* Media Queries */
-/****************************************************************************/
+  .nav-item {
 
-/*========== Desktop ==========*/
+    &:nth-child(2) {
+      float: right;
+      opacity: 0;
+      transition: opacity .4s cubic-bezier(.55, 0, .1, 1) 4s;
+    }
 
-@media screen and (min-width: 1600px) {
-  
+  }
 }
+
+
+
+
+
+

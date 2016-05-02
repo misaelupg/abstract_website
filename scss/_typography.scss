@@ -1,51 +1,15 @@
-@mixin sexy-text() {
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+@mixin sexy-text {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
-@mixin nav-item($letter-spacing, $font-weight) {
-    color: $grey;
-    font-size: $link;
-    font-weight: $font-weight;
-    letter-spacing: $letter-spacing;
-    text-decoration: none;
-    display: inline-block;
+@mixin link($color) {
+  
+  color: $color; 
+  display: inline-block;
+  font-size: $link;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-decoration: none;
+  padding: 5px;
 }
-
-@mixin big-short-headline($x-times) {
-    font-size: $x-times*$h1-big;
-    font-weight: 900;
-}
-
-@mixin lora-paragraph() {
-    font-family: $lora;
-    letter-spacing: 1px;
-    font-size: 0.8em;
-    margin: 0.3em 0;
-    line-height: $line-height-small;
-}
-
-@mixin styled-text() {
-    letter-spacing: 7px;
-    font-size: 0.6em;
-    font-weight: 900;
-    transform: rotate(0.25turn);
-    position: absolute;
-}
-
-@mixin link ($color){
-    font-weight: 200;
-    padding: 7px 0;
-    color: $color;
-    border-bottom: 2px solid $grey;
-    &:hover {
-        color: $grey-lighter;
-    }
-    &:active {
-        color: $grey-lighter;
-    }
-    &:visited {
-        color: $grey-lighter;
-    }
-}
-
