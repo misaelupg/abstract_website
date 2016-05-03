@@ -1,11 +1,13 @@
 
 @mixin make-stroke-circle($radius, $color, $left, $top, $blending, $border-thickness ) {
-    width: $radius;
-    height: $radius;
-    border-radius: 100%;
-    mix-blend-mode: $blending;
-    position: absolute;
-    left: $left;
-    top: $top;
-    border: $border-thickness solid $color;
+  border: $border-thickness solid $color;
+  border-radius: 100%;
+  height: $radius;
+  left: $left;
+  mix-blend-mode: $blending;
+  position: absolute;
+  top: $top;
+  width: $radius;
+    
+    
 }
