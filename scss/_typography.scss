@@ -10,6 +10,14 @@
   font-size: $link;
   font-weight: 400;
   letter-spacing: .1em;
-  padding: 5px;
+  padding: 16px 5px;
   text-decoration: none;
+}
+
+@mixin styled-text() {
+    letter-spacing: 7px;
+    font-size: 0.6em;
+    font-weight: 900;
+    transform: rotate(0.25turn);
+    position: absolute;
 }
