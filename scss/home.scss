@@ -10,7 +10,7 @@ html {
     box-sizing: border-box;
 }
 
-*. *:after, *:before {
+*, *:after, *:before {
     box-sizing: inherit;
 }
 
@@ -18,20 +18,45 @@ html {
 /* Main Grid */
 /****************************************************************************/
 
-tile {
-    float: left;
-    width: 100%;
+.tile {
+    width: 400px;
     &.--small {
         
     }
     &.--medium {
-
+    width: 100%;
     }
     &.--big {
-        
+        width: 50%;
     }
 }
 
 .bg-blue {
     background-color: $blue;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.row, .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.fullscreen {
+    width: 100%;
 }
