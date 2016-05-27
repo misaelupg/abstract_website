@@ -1,0 +1,30 @@
+<div ng-controller="homeController as home">
+
+    <section class="cover --fullscreen container">
+        <header>
+            <nav>
+                <ul>
+                    <li><h4><a href="" class="link">abstract</a></h4></li>
+                    <li><h4><a href="" class="contact-link" ng-click="home.showSidebar = true">+ contact</a></h4></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="intro-text">
+            <h1>we <span id="typedStrings"><p>craft</p>
+            <p>design</p>
+            <p>build</p></span><span class="typed"></span> digital experiences for humans</h1>
+            <p>We design and build mobile and web apps, help your brand to stand-out, improve your workflow and services to increase your profits.</p>
+        </div>
+        
+    </section>
+    <!-- <div class="circle"></div>
+    <div class="circle --small"></div>
+    <div class="line"></div>
+    <div class="square"></div> -->
+    <div id="contact-aside" ng-class="{show: home.showSidebar}">
+            <i class="material-icons" ng-click="home.showSidebar = false">close</i>
+            <p>We design and build mobile and web apps, help your brand to stand-out, improve your workflow and services to increase your profits.</p>
+    </div>
+    
+</div>

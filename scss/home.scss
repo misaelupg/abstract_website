@@ -8,55 +8,192 @@
 
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 *, *:after, *:before {
     box-sizing: inherit;
 }
 
-/****************************************************************************/
-/* Main Grid */
-/****************************************************************************/
-
-.tile {
-    width: 400px;
-    &.--small {
-        
-    }
-    &.--medium {
-    width: 100%;
-    }
-    &.--big {
-        width: 50%;
-    }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+a {
+  text-decoration: none; 
+  color: black;
+}
+
+h1 {
+    font-family: $post-grotesk;
+    font-weight: 900;
+}
+
+p {
+    font-family: $common-sans;
+}
+
+/****************************************************************************/
+/* Cover */
+/****************************************************************************/
+
 .bg-blue {
+    width: 300px;
+    height: 300px;
     background-color: $blue;
 }
 
-.bg-yellow {
-    background-color: $yellow;
-}
-
-.bg-red {
-    background-color: $red;
-}
-
-.row, .column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.row {
-    flex-direction: row;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.fullscreen {
+.--fullscreen, .container {
     width: 100%;
 }
+.container {
+    padding: 10%;
+}
+
+.cover {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        @include summaryText();
+        opacity: .6;
+        font-size: 1em;
+    }
+}
+ nav {
+    h4 {
+        font-weight: 100;
+        margin: 0;
+        font-family: $common-sans;
+    }
+    
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    li {
+        display: inline-block;
+        // position: relative;
+
+    }
+    .link {
+        padding: 1.33em 0;
+    }
+    .contact-link {
+        position: relative;
+        padding: 1.33em 0;
+        &:after {
+            background: black;
+            content: '';
+            height: 1px;
+            left: 0px;
+            position: absolute;
+            top: 3em;
+            width: 4.6em;
+        }
+    }
+ }
+
+ /*========== Contact Aside ==========*/
+ 
+#contact-aside {
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    transform: translate3d(300px, 0, 0);
+    transition: transform .3s cubic-bezier(0.55,0,0.1,1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    p {
+        @include summaryText();
+        opacity: .6;
+        font-size: 1em;
+    }
+    i {
+        position: absolute;
+        top:20px;
+        right: 20px;
+    }
+    &.show {
+        transform: translate3d(0,0, 0);
+    }
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 15px solid $brown;
+    transform: translate3d(65%, -294%, 0);
+    position: absolute;
+    &.--small {
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        transform:  translate3d(20%, -74%, 0);
+        position: absolute;
+        border: none;
+        z-index: -1;
+        border: 15px solid $new-yellow;
+    }
+}
+
+.line {
+    width: 20px;
+    height: 400px;
+    position: absolute;
+    transform: translate3d(10%, -294%, 0) rotate(45deg) ;
+    background-color: $cyan; 
+       
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate3d(0, -494%, 0) rotate(45deg) ;
+    border: 15px solid $magenta;
+    z-index: -3;
+}
+
+/****************************************************************************/
+/* Animations */
+/****************************************************************************/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+

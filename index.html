@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="abstractWeb">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -9,36 +9,30 @@
 <link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css
 ">
 
+<!-- Normalize -->
+<link rel="stylesheet" type="text/css" href="./bower_components/normalize-css/normalize.css">
 <!-- Home CSS -->
 <link rel="stylesheet" type="text/css" href="./css/home.css">
 
 <!-- jQuery -->
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- ==========================================================================
 Main Grid
 ========================================================================== -->
-<section class="fullscreen">
-    <div class="row"> 
-        <div class="column">
-            <div class="row">
-                <div class="tile --small bg-blue">
-                </div>
-                <div class="tile --small bg-yellow" >
-                </div>
-            </div>
-            <div class="tile --medium bg-red">
-            </div>
-        </div>
-        <div class="tile --big bg-blue">
-        </div>
-    </div>
-</section>
-
-
 </head>
+
 <body>
 
-<script src="js/main.js"></script>
+<div ui-view></div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

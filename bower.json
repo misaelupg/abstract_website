@@ -19,6 +19,9 @@
   "devDependencies": {
     "fullpage.js": "~2.7.9",
     "jquery": "^2.2.3",
-    "normalize-css": "normalize.css#^4.1.1"
+    "normalize-css": "normalize.css#^4.1.1",
+    "angular": "1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "material-design-icons": "^2.2.3"
   }
 }

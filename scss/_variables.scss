@@ -21,6 +21,11 @@ $grey-lighter: #fff;
 $black: #000 ;
 $black-lighter: #212121;
 
+
+$magenta: #5e52c2;
+$cyan: #00c2de;
+$new-yellow: #edaf02;
+$brown: #543715;
 /****************************************************************************/
 /* Fonts */
 /****************************************************************************/
@@ -93,11 +98,24 @@ $black-lighter: #212121;
   url('../fonts/PostGrotesk-Light.eot?#iefix') format('embedded-opentype');
 }
 
+@font-face {
+  font-family: 'Common Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/CommonSans-Regular.eot'), 
+  url('../fonts/CommonSans-Regular.woff') format('woff'),
+  url('../fonts/CommonSans-Regular.ttf') format('truetype'),
+  url('../fonts/CommonSans-Regular.svg#Lora-Light') format('svg'),
+  url('../fonts/CommonSans-Regular.eot?#iefix') format('embedded-opentype');
+}
+
 
 $lora: 'Lora-Regular', serif;
 $lora-italic: 'Lora-Italic', serif;
 
 $post-grotesk: 'PostGrotesk', serif;
+
+$common-sans: 'Common Sans', sans-serif;
 
 
 
