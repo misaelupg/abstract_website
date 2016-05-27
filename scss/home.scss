@@ -30,7 +30,7 @@ ul {
 
 a {
   text-decoration: none; 
-  color: black;
+  color: inherit;
 }
 
 h1 {
@@ -39,18 +39,12 @@ h1 {
 }
 
 p {
-    font-family: $common-sans;
+    font-family: $lora;
 }
 
 /****************************************************************************/
 /* Cover */
 /****************************************************************************/
-
-.bg-blue {
-    width: 300px;
-    height: 300px;
-    background-color: $blue;
-}
 
 .--fullscreen, .container {
     width: 100%;
@@ -60,9 +54,10 @@ p {
 }
 
 .cover {
+    color: $grey;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     h1 {
         font-size: 2.5em;
     }
@@ -76,17 +71,15 @@ p {
     h4 {
         font-weight: 100;
         margin: 0;
-        font-family: $common-sans;
+        font-family: $post-grotesk;
     }
     
-    ul {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
     li {
+        position: relative;
         display: inline-block;
-        // position: relative;
+        &:nth-child(2) {
+            float: right;
+        }
 
     }
     .link {
@@ -95,34 +88,37 @@ p {
     .contact-link {
         position: relative;
         padding: 1.33em 0;
-        &:after {
-            background: black;
-            content: '';
-            height: 1px;
-            left: 0px;
-            position: absolute;
-            top: 3em;
-            width: 4.6em;
-        }
     }
  }
+
+ header {
+    position: fixed;
+    padding: 20px 10%;
+    width: 100%;
+    background-color: $blue;
+    color: $grey;
+    z-index: 1;
+ }
+
+
 
  /*========== Contact Aside ==========*/
  
 #contact-aside {
+    z-index: 2;
     padding: 50px;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -15px;
     width: 300px;
-    background-color: white;
+    background-color: $grey;
     transform: translate3d(300px, 0, 0);
     transition: transform .3s cubic-bezier(0.55,0,0.1,1);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     p {
         @include summaryText();
         opacity: .6;
-        font-size: 1em;
+        font-size: .8em;
     }
     i {
         position: absolute;
@@ -130,7 +126,7 @@ p {
         right: 20px;
     }
     &.show {
-        transform: translate3d(0,0, 0);
+        transform: translate3d(-15px,0, 0);
     }
 }
 
@@ -172,6 +168,59 @@ p {
 }
 
 /****************************************************************************/
+/* Home Grid */
+/****************************************************************************/
+
+.row {
+    display: flex;
+    display-flow: row nowrap;
+}
+
+.tile {
+    flex: 1 100%;
+    position: relative;
+    position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;    
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-red {
+    background-color: $red-lighter;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.bg-magenta {
+    background-color: $magenta;
+}
+
+.bg-cyan {
+    background-color: $cyan;
+}
+
+.bg-brown {
+    background-color: $brown;
+}
+
+.bg-yellow-2 {
+    background-color: $yellow-lighter;
+}
+
+/****************************************************************************/
+/* Footer */
+/****************************************************************************/
+
+footer {
+    height: 600px;
+}
+
+/****************************************************************************/
 /* Animations */
 /****************************************************************************/
 
@@ -195,5 +244,29 @@ p {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+
+/*  Ripple */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+  animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 

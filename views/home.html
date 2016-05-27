@@ -1,14 +1,14 @@
 <div ng-controller="homeController as home">
-
-    <section class="cover --fullscreen container">
-        <header>
-            <nav>
-                <ul>
-                    <li><h4><a href="" class="link">abstract</a></h4></li>
-                    <li><h4><a href="" class="contact-link" ng-click="home.showSidebar = true">+ contact</a></h4></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav>
+            <ul>
+                <li><h4><a href="" class="link">abstract</a></h4></li>
+                <li><h4><a href="" class="contact-link" ng-click="home.showSidebar = true">+ contact</a></h4></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cover --fullscreen container bg-blue">
+       
         
         <div class="intro-text">
             <h1>we <span id="typedStrings"><p>craft</p>
@@ -22,9 +22,27 @@
     <div class="circle --small"></div>
     <div class="line"></div>
     <div class="square"></div> -->
+
     <div id="contact-aside" ng-class="{show: home.showSidebar}">
             <i class="material-icons" ng-click="home.showSidebar = false">close</i>
             <p>We design and build mobile and web apps, help your brand to stand-out, improve your workflow and services to increase your profits.</p>
     </div>
-    
+
+    <section class="home-grid flex">
+        <div class="row">
+            <div class="tile bg-red --ripple"></div>
+            <div class="tile bg-yellow-2 --ripple"></div>
+        </div>
+        <div class="row">
+            <div class="tile bg-magenta --ripple"></div>
+        </div>
+        <div class="row">
+            <div class="tile bg-cyan --ripple"></div>
+            <div class="tile bg-brown --ripple"></div>
+        </div>
+    </section>
+    <footer class="footer container bg-blue">
+        
+    </footer>
+
 </div>
